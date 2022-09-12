@@ -1,0 +1,8 @@
+<div class="p-value__list">
+  <% 
+    for (var i = 0; i < jsonData.valuelist.value.length; i++) { 
+      var contents_no = i + 1;
+  %> 
+    <%- include('./_c-contents' , {contents_title: jsonData.valuelist.value[i].title, contents_text:jsonData.valuelist.value[i].text, contents_no: contents_no, class_name:'p-value__contents'}) %>
+  <% } %>
+</div>

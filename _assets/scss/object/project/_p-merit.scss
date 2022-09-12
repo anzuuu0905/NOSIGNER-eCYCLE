@@ -1,0 +1,45 @@
+@use '../..//mixin/mixin' as *;
+@use '../../setting/setting' as *;
+
+/* --------------------------------
+p-merit
+----------------------------------- */
+
+.p-merit__inner{
+  width: 62rem;
+  margin: 0 auto;
+}
+
+.p-merit__copy{
+  font-size: 3.6rem;
+  color: $font-color2;
+  text-align: center;
+  margin-top: 9rem;
+}
+
+.p-merit__copy img{
+  margin-right: 1rem;
+}
+
+.p-merit__copy p{
+  line-height: 1.67;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-merit__copy img{
+  width: 22rem;
+}
+
+.p-merit__btn{
+  margin-top: 5.6rem;
+}
+
+.p-merit__annotation{
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin-top: 2rem;
+  text-align: center;
+}

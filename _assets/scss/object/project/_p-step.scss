@@ -1,0 +1,79 @@
+@use '../..//mixin/mixin' as *;
+@use '../../setting/setting' as *;
+
+/* --------------------------------
+p-step
+----------------------------------- */
+.p-step{
+  margin-top: 8rem;
+  padding: 6rem 4rem 4rem;
+  background: $bg-color5;
+  border-radius: 20px;
+}
+
+.p-step__title{
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: $font-color2;
+  text-align: center;
+}
+
+.p-step__contents {
+  position: relative;
+  margin: 7rem auto 0;
+  padding: 4rem;
+  width: 54rem;
+  border: 2px solid $border-color1;
+  border-radius: 20px;
+  box-sizing: border-box;
+  background: $bg-color1;
+}
+
+.p-step__contents::before{
+  border: 1px solid $border-color1;
+  height: 7rem;
+  content: "";
+  position: absolute;
+  top: -7.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box; 
+}
+
+.p-step__contents:first-of-type::before{
+  display: none;
+}
+
+.p-step__contents::after{
+  content: "";
+  position: absolute;
+  top: -3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  border: 2px solid $border-color1;
+  background-repeat: no-repeat;
+}
+
+.p-step__contents-1::after{
+  background: url(../../img/common/1.jpg);
+  background-size: cover;
+}
+.p-step__contents-2::after{
+  background: url(../../img/common/2.jpg);
+  background-size: cover;
+}
+.p-step__contents-3::after{
+  background: url(../../img/common/3.jpg);
+  background-size: cover;
+}
+.p-step__contents-4::after{
+  background: url(../../img/common/4.jpg);
+  background-size: cover;
+}
+.p-step__contents-5::after{
+  background: url(../../img/common/5.jpg);
+  background-size: cover;
+}

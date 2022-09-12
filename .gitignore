@@ -1,0 +1,16 @@
+_gulp/node_modules/
+_gulp/package-lock.json
+_static/dist/
+
+*.DS_Store
+*.map
+
+!.gitkeep
+
+_server/wp/*
+!_server/wp/wp-content/
+_server/wp/wp-content/languages/
+_server/wp/wp-content/plugins/
+_server/wp/wp-content/uploads/
+_server/wp/wp-content/index.php
+_server/wp/wp-content/ewww/

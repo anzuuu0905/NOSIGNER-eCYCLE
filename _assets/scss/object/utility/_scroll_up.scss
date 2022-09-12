@@ -1,0 +1,49 @@
+@use '../../mixin/mixin' as *;
+@use '../../setting/setting' as *;
+
+/*----------------------------
+scroll_up ｜下から上へ出現
+----------------------------*/
+.scroll_up {
+  transition: 0.8s ease-in-out;
+  transform: translateY(30px);
+  opacity: 0;
+}
+.scroll_up.on {
+  transform: translateY(0);
+  opacity: 1.0;
+}
+
+.scroll_up.on:nth-child(2){
+  transition-delay: .3s;
+}
+
+.scroll_up.on:nth-child(3){
+  transition-delay: .6s;
+}
+
+/*----------------------------
+scroll_left ｜左から出現
+----------------------------*/
+.scroll_left {
+    transition: 0.8s ease-in-out;
+    transform: translateX(-30px);
+    opacity: 0;
+}
+.scroll_left.on {
+    opacity: 1.0;
+    transform: translateX(0);
+}
+
+/*----------------------------
+scroll_right ｜右から出現
+----------------------------*/
+.scroll_right {
+    transition: 0.8s ease-in-out;
+    transform: translateX(30px);
+    opacity: 0;
+}
+.scroll_right.on {
+    opacity: 1.0;
+    transform: translateX(0);
+}

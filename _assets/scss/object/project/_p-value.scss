@@ -1,0 +1,54 @@
+@use '../..//mixin/mixin' as *;
+@use '../../setting/setting' as *;
+
+/* --------------------------------
+p-value
+----------------------------------- */
+.p-value__list {
+  margin-top: 1.6rem;
+}
+
+.p-value__contents {
+  position: relative;
+  margin: 11rem auto 0;
+  padding: 4rem 8rem;
+  width: 62rem;
+  // border: 2px solid $border-color1;
+  border-radius: 20px;
+  box-sizing: border-box;
+  background: $bg-color3;
+}
+
+.p-value__contents::after{
+  content: "";
+  position: absolute;
+  top: -7rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30rem;
+  height: 10rem;
+  background-repeat: no-repeat;
+}
+
+.p-value__contents-1::after{
+  background: url(../../img/common/icon-1.png);
+  background-size: cover;
+}
+.p-value__contents-2::after{
+  background: url(../../img/common/icon-2.png);
+  background-size: cover;
+}
+.p-value__contents-3::after{
+  background: url(../../img/common/icon-3.png);
+  background-size: cover;
+}
+
+.p-value__contents .c-contents-text{
+  font-size: 1.6rem;
+  letter-spacing: 0.02em;
+}
+
+.p-value__annotation {
+  margin: 4rem auto 0;
+  width: 100%;
+}

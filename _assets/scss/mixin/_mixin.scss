@@ -1,0 +1,69 @@
+@use '../setting/setting' as s;
+@use "sass:math";
+
+// placeholder
+@mixin placeholder($color) {
+  ::-webkit-input-placeholder {
+    color: $color;
+  }
+  :-ms-input-placeholder {
+    color: $color;
+  }
+  ::-ms-input-placeholder {
+    color: $color;
+  }
+  ::placeholder {
+    color: $color;
+  }
+}
+
+// font-face設定
+@mixin fontFace($name:test, $weight:normal, $path:test ,$type:otf ,$type_text:opentype) {
+  @font-face {
+    font-family: $name;
+    font-weight: $weight;
+    src:
+    url(#{$path}.woff) format('woff'),
+    url(#{$path}.#{$type}) format('#{$type_text}');
+  }
+}
+
+// メディアクエリ
+@mixin pc {
+  @media only screen and (min-width: #{s.$bp-pc}) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media only screen and (max-width: #{s.$bp-sp}) {
+    @content;
+  }
+}
+
+@mixin min($width) {
+  @media only screen and (min-width: #{$width}px) {
+    @content;
+  }
+}
+
+@mixin max($width) {
+  @media only screen and (max-width: #{$width}px) {
+    @content;
+  }
+}
+
+// settingで指定した幅を基準にvwを返す
+@function vw($size, $viewport: s.$vw_standard_width) {
+  $rate: math.div(100, $viewport);
+  @return $rate * $size * 1vw;
+}
+
+// 数値のみを取り出す
+// 参照：https://css-tricks.com/snippets/sass/strip-unit-function/
+@function strip-unit($number) {
+  @if type-of($number) == "number" and not unitless($number) {
+    @return math.div($number, $number * 0 + 1);
+  }
+  @return $number;
+}

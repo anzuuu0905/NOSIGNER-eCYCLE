@@ -1,0 +1,46 @@
+@use '../../mixin/mixin' as *;
+@use '../../setting/setting' as *;
+
+.wpcf7-spinner{
+  display:none;
+}
+.wpcf7-list-item{
+  margin-left:0;
+}
+
+// .wpcf7-response-output{
+//   display: none;
+// }
+
+.wpcf7-form-control-wrap input,
+.wpcf7-form-control-wrap select{
+  width: 100%;
+  // border: 1px solid $gray3;
+  // border: 1px solid $black;
+  // background: $black;
+  &:checked{
+    // color: $black;
+  }
+  // height: 2.6rem;
+  // width: 326px;
+}
+
+
+
+.wpcf7-not-valid-tip{
+  font-size: 1.2rem;
+  @include pc{
+    font-size: 1.4rem;
+  }
+}
+
+.wpcf7-previous{
+  width: 100%;
+  // border:none !important;
+  padding: 1.1rem 0 !important;
+  // box-sizing: border-box !important;
+  // font-size: 1.2rem !important;
+  @include pc{
+    // font-size: 1.4rem !important;
+  }
+}

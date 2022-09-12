@@ -1,0 +1,23 @@
+<footer id="footer" class="c-footer">
+  <div class="inner-block">
+    <nav>
+      <ul>
+        <% for(let page in jsonData.pages){ %>
+        <li><a href="<%= jsonData.pages[page].slug %>"><%= jsonData.pages[page].name %></a></li>
+        <% }; %>
+      </ul>
+    </nav>
+    <p><small>（c）<%= jsonData.siteInfo.name %></small></p>
+  </div><!-- /inner-block -->
+</footer>
+
+<div id="pagetop" class="c-pagetop"><a href="#wrapper"><img src="/img/common/pagetop.png" alt="↑"></a></div>
+
+</div><!-- /wrapper -->
+
+<script src="/js/lib/svgxuse.min.js"></script>
+<script src="/js/lib/jquery-3.6.0.min.js"></script>
+<script src="/js/common.js"></script>
+</body>
+
+</html>

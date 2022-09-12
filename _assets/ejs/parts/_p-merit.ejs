@@ -1,0 +1,73 @@
+
+  <section class="p-merit">
+    <div class="l-inner">
+      <div class="p-merit__inner">
+        <h2 class="c-common-title font-color3">
+          ご参加いただくメリット
+        </h2>
+
+        <div class="p-merit__contents">
+          <div class="p-merit__chiyoda">
+            <%# メリット %>
+            <div class="p-merit__value p-value">
+              <h3 class="c-common-title font-color2">
+                お得で簡単、再エネ切替え！
+              </h3>
+              <%- include('./_p-value__list') %>
+            </div>
+            <div class="p-value__annotation">
+              <p>
+                ※1 RE100等の証明には再エネ指定の環境価値を示す証書を購入する必要があります。
+              </p>
+              <p>
+                ※2 入札によって価格は変動する可能性があります。
+              </p>
+              <p>
+                ※3 本事業では基本的にFIT電気を取扱います。
+              </p>
+              <br>
+              <p>
+                【留意事項】
+              </p>
+              <p>
+                ※本事業で使用する電気は基本的にFIT電気です。
+              </p>
+              <p>
+                【FIT電気】：FIT制度に基づき事業計画の認定を受けた事業に係る発電設備において発電された電気。
+              </p>
+              <p>
+                【FIT制度】：再生可能エネルギー源（太陽光、風力、水力、地熱、バイオマス）を用いて発電された電気を、国が定める価格で一定期間、電気事業者が買い取ることを義務付けるもの。（経済産業省資源エネルギー庁HP）
+              </p>
+              <p>
+                ※本事業で流通するFIT電気は、(1)FIT電気のみ (2)再エネ指定の環境価値を示す証書等により実質的に再生可能エネルギーによる電気としての価値を有するもの、両方を購入可能です。（この電気を調達する費用の一部は、電気の利用者が広く負担する賦課金によって賄われており、CO2が排出されないことを始めとする再生可能エネルギーとしての価値を訴求するにあたっては、国の制度上、非化石証書等の環境価値を取引する証書の使用が必要とされています。FIT電気は、環境価値を示す証書を使用しない場合には、CO２排出量について火力発電等も含めた全国平均の電気のCO2排出量を持った電気として扱われます。）
+              </p>
+            </div>
+
+            <%# STEP %>
+            <div class="p-merit__step p-step">
+              <h3 class="p-step__title">
+                再エネ切替えまでの4STEP
+              </h3>
+              <%- include('./_p-step__list') %>
+            </div>
+
+            <div class="p-merit__copy">
+              <p>
+                <img src="../img/svg/logo.svg" alt="e.cycle">
+                の入札に参加して
+              </p>
+              <p>いい再エネを使おう！</p>
+              </div>
+            <%# ボタン %>
+            <div class="p-merit__btn">
+              <%- include('./_c-btn',  {btn_text:'お申込みはこちら', btn_url:'#'}) %>
+            </div>
+
+            <p class="p-merit__annotation">
+              お問合せ後、担当者からご連絡させていただきます
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

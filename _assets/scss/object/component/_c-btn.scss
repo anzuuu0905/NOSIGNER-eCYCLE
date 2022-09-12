@@ -1,0 +1,25 @@
+@use '../..//mixin/mixin' as *;
+@use '../../setting/setting' as *;
+
+/* --------------------------------
+c-btn
+----------------------------------- */
+.c-btn {
+  width: 100%;
+}
+
+.c-btn a{
+  border-radius: 10rem;
+  display: block;
+  color: $font-color3;
+  font-size: 2.4rem;
+  padding: 3rem;
+  background: $bg-color2;
+  box-shadow: 0 2rem 2rem rgba(0, 158, 140, 0.3);
+  transition : 0.3s;
+}
+
+.c-btn a:hover{
+  color: rgba(216,216,216,0.3);
+  box-shadow: none;  
+}

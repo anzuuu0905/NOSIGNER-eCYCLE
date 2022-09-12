@@ -1,0 +1,8 @@
+<div class="p-step__list">
+  <% 
+    for (var i = 0; i < jsonData.steplist.step.length; i++) { 
+      var contents_no = i + 1;
+  %> 
+    <%- include('./_c-contents' , {contents_title: jsonData.steplist.step[i].title, contents_text:jsonData.steplist.step[i].text, contents_no: contents_no, class_name:'p-step__contents'}) %>
+  <% } %>
+</div>

@@ -1,0 +1,22 @@
+@use '../../mixin/mixin' as *;
+@use '../../setting/setting' as *;
+
+.u-hidden-pc {
+	// display: block;
+	// PC時に非表示
+	@include pc {
+		display: none;
+	}
+}
+
+.u-hidden-sp {
+	// display: none;
+	// スマホ時に非表示
+	@include sp {
+		display: none;
+	}
+}
+
+.u-hidden{
+	display: none;
+}

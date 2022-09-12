@@ -1,0 +1,26 @@
+@use '../..//mixin/mixin' as *;
+@use '../../setting/setting' as *;
+
+/* --------------------------------
+c-common-title
+----------------------------------- */
+.c-common-title {
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color:$font-color2;
+  text-align: center;
+}
+
+.c-common-title.font-color1{
+  color:$font-color1;
+}
+
+.c-common-title.font-color2{
+  color:$font-color2;
+}
+
+.c-common-title.font-color3{
+  color:$font-color3;
+}

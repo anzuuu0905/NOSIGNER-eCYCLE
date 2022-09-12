@@ -1,0 +1,14 @@
+@use '../..//mixin/mixin' as *;
+@use '../../setting/setting' as *;
+
+/* --------------------------------
+c-contents-title
+----------------------------------- */
+.c-contents-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  color:$font-color2;
+  text-align: center;
+}
