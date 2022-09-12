@@ -1,0 +1,44 @@
+@use '../..//mixin/mixin' as *;
+@use '../../setting/setting' as *;
+
+/* --------------------------------
+p-partner
+----------------------------------- */
+
+.p-partner__inner{
+  // position: relative;
+}
+.p-partner__wrapper{
+  margin-top: 9rem;
+  display: flex;
+}
+
+.p-partner__textbox{
+  width: 38rem;
+}
+
+.p-partner__copy{
+}
+
+.p-partner__text{
+  font-size: 1.6rem;
+  line-height: 1.75;
+  letter-spacing: 0.05em;
+}
+
+.p-partner__img{
+  position: relative;
+  width: 81.8rem;
+  height: 61rem;
+  margin-left: -25.8rem;
+}
+
+.p-partner__img img{
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+

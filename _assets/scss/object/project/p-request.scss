@@ -1,0 +1,33 @@
+@use '../..//mixin/mixin' as *;
+@use '../../setting/setting' as *;
+
+/* --------------------------------
+p-request
+----------------------------------- */
+.p-request{
+  background: url(../../../img/common/kv_green.jpg);
+  height: 56.5vw;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  position: relative;
+}
+
+.p-request::after{
+  content: "";
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background:url(../../../img/common/japan_1.png);
+  width: 110rem;
+  height: 76rem;
+}
+
+.p-request__wrapper{
+  padding-top: 20.5rem;
+}
+
+.p-request__box{
+  width: 62rem;
+  margin: 0 auto;
+}

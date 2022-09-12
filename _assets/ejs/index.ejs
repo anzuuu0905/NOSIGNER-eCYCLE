@@ -2,11 +2,20 @@
 
 <%- include('./common/_header', {pageId:pageId }) %>
 
-<%# console.log(jsonData) %>
-<main class="p-home">
+
+<main>
+
+  <!-- ご参加いただくメリット -->
+  <!-- <%- include('./parts/_p-merit') %> -->
 
   <!-- ご参加いただくメリット -->
   <%- include('./parts/_p-merit') %>
+
+  <!-- パートナー地域 -->
+  <%- include('./parts/_p-partner') %>
+
+  <!-- お申し込み -->
+  <%- include('./parts/_p-request') %>
 
 </main>
 

@@ -1,0 +1,16 @@
+@use '../../mixin/mixin' as *;
+
+/* --------------------------------
+c-pagetop
+----------------------------------- */
+.c-request-btn{
+  margin-top: 5.6rem;
+}
+
+.c-request-btn__annotation{
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin-top: 2rem;
+  text-align: center;
+}
