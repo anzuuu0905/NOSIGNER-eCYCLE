@@ -28,23 +28,50 @@
 <body>
 
   <div id="wrapper">
-    <header id="header" class="c-header">
-      <div class="inner-block">
-        <% if (pageId === 'home'){ %>
-        <h1><%= jsonData.siteInfo.name %></h1>
-        <% } else { %>
-        <a href="/"><%= jsonData.siteInfo.name %></a>
-        <% } %>
-      </div><!-- /inner-block -->
+    <header id="header" class="p-header">
+      <div class="p-header__inner">
+        <a href="./" class="p-header__logo">
+          <h1>
+            <img src="../../img/common/header-logo.svg" alt="いいサイクル千代田">
+          </h1>
+        </a>
+        <nav class="p-header__nav">
+          <ul class="p-header__menu">
+            <% for(let page in jsonData.pages){ %>
+            <% if (page === pageId) { %>
+            <!-- <li class="current"> -->
+                <!-- <%= jsonData.pages[page].name %> -->
+            <% } else { %>
+              <% console.log(page) %>              <% if (page === 'about') { %>
+                <li>
+                  <a href="<%= jsonData.pages[page].slug %>"><img src="../img/svg/logo.svg" alt="e.cycle">とは
+                  </a>
+                </li>
+                      <% } else { %>
+                
+              <li>
+                <a href="<%= jsonData.pages[page].slug %>"><%- jsonData.pages[page].name %>
+                  <% if (typeof jsonData.pages[page].subpages !== 'undefined') { %>
+                    <span></span>
+                    <% }; %>
+                  </a>
+                <% if (typeof jsonData.pages[page].subpages !== 'undefined') { %>
+                  <ul class="p-header__submenu">
+                  <% for(let subpage in jsonData.pages[page].subpages){ %>
+                    <% console.log(jsonData.pages[page].subpages[subpage].name); %>
+                    <li>
+                      <a href="<%= jsonData.pages[page].subpages[subpage].slug %>"><%- jsonData.pages[page].subpages[subpage].name %>
+                      </a>
+                    </li>
+                    <% }; %>
+                  </li>
+                </ul>
+              <% }; %>
+            <% }; %>
+            </li>
+            <% } %>
+            <% }; %>
+          </ul>
+        </nav>
+      </div><!-- /l-inner -->
     </header>
-    <nav>
-      <ul>
-        <% for(let page in jsonData.pages){ %>
-        <% if (page === pageId) { %>
-        <li class="current"><%= jsonData.pages[page].name %></li>
-        <% } else { %>
-        <li><a href="<%= jsonData.pages[page].slug %>"><%= jsonData.pages[page].name %></a></li>
-        <% } %>
-        <% }; %>
-      </ul>
-    </nav>

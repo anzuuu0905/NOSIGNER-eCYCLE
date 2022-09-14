@@ -1,0 +1,64 @@
+@use '../..//mixin/mixin' as *;
+@use '../../setting/setting' as *;
+
+/* --------------------------------
+p-footer
+----------------------------------- */
+.p-footer{
+  width: 100%;
+  background: $bg-color2;
+  position: relative;
+}
+
+.p-footer__inner{
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 2.5rem 3.5rem;
+}
+
+.p-footer__logo{
+  padding: 1.5rem;
+}
+
+.p-footer__menu{
+  display: flex;
+  width: auto;
+  height: auto;
+  justify-content: end;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.p-footer__menu a{
+  padding: 1.5rem;
+  color: $font-color3;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  line-height: 1;
+  text-decoration: underline;
+}
+
+.p-footer__menu img{
+  width: 11.94rem;
+}
+
+.p-footer__menu li{
+  display: flex;
+  position: relative;
+}
+
+.p-footer__textbox{
+  margin-top: 0.5rem;
+  padding-right: 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 2;
+  color: $font-color3;
+  text-align: right;
+}
+
+.p-footer__text small{
+
+}

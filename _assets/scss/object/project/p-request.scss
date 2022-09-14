@@ -5,7 +5,7 @@
 p-request
 ----------------------------------- */
 .p-request{
-  background: url(../../../img/common/kv_green.jpg);
+  background: url(../../../img/common/kv_g.jpg);
   height: 56.5vw;
   background-repeat: no-repeat;
   background-position: top;
@@ -20,7 +20,12 @@ p-request
   right: 0;
   background:url(../../../img/common/japan_1.png);
   width: 110rem;
-  height: 76rem;
+  max-width: 76.389vw;
+  height: 52.778vw;
+  z-index: 10;
+  background-size: contain;
+  background-position:center;
+  background-repeat: no-repeat;
 }
 
 .p-request__wrapper{
@@ -29,5 +34,6 @@ p-request
 
 .p-request__box{
   width: 62rem;
+  max-width: 100%;
   margin: 0 auto;
 }

@@ -1,14 +1,27 @@
-@use '../../mixin/mixin' as *;
+@use '../..//mixin/mixin' as *;
+@use '../../setting/setting' as *;
 
 /* --------------------------------
 c-pagetop
 ----------------------------------- */
 .c-pagetop {
-  right: 30px;
+  right: 3rem;
+  width: 5rem;
+  height: 5rem;
+  background: $bg-color2;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   a {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: $font-color3;
+    text-transform: uppercase;
   }
   @include sp {
-    right: 10px;
+    right: 1rem;
   }
 }

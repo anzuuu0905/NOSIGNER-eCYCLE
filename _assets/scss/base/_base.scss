@@ -12,9 +12,9 @@ html {
   background: $bg-color3;
   line-height: 1.7;
   word-break: break-all;
-  // @include min(768) {
-  //   font-size: calc((10/1180) * 100vw);
-  // }
+  @include max(1180) {
+    font-size: calc((10/1180) * 100vw);
+  }
   // @include min(1180) {
   //   font-size: 62.5%; // 1rem = 10px
   // }

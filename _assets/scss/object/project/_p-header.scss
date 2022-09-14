@@ -1,0 +1,83 @@
+@use '../..//mixin/mixin' as *;
+@use '../../setting/setting' as *;
+
+/* --------------------------------
+p-header
+----------------------------------- */
+.p-model{
+padding-top: 100px;
+}
+
+.p-header{
+  position: fixed;
+  width: 100%;
+}
+
+.p-header__inner{
+  // width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+.p-header__logo{
+  padding: 1.5rem;
+}
+
+.p-header__menu{
+  display: flex;
+  width: auto;
+  height: auto;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.p-header__menu a{
+  padding: 1.5rem;
+  color: $font-color2;
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+}
+
+.p-header__menu img{
+  width: 11.24rem;
+}
+
+.p-header__menu li{
+  display: flex;
+  position: relative;
+}
+
+.p-header__menu li a span{
+  background: url(../../../img/svg/angle-down-solid.svg);
+  width: 1.055rem;
+  height: 0.615rem;
+  margin-left: 1rem;
+}
+
+.p-header__submenu {
+  display: block;
+  position: absolute;
+  top: 5.5rem;
+  left: 1.5rem;
+  width: 14.8rem;
+  background: $bg-color1;
+  border-radius: 1rem;
+}
+
+.p-header__submenu a {
+  width: 100%;
+  padding: 1.4rem;
+  font-weight: 500;
+  color: $font-color1;
+  border-bottom: 1px solid $border-color2;
+}
+
+// .p-header__submenu a:last-of-type{
+//   border-bottom: none;
+// }
+
+body{
+  background: $font-color4;
+}

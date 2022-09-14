@@ -1,0 +1,28 @@
+@use '../..//mixin/mixin' as *;
+@use '../../setting/setting' as *;
+
+/* --------------------------------
+p-lead
+----------------------------------- */
+.p-lead{
+  padding: 10rem 0 20.3rem;
+}
+
+.p-lead__inner{
+  color: $font-color3;
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+.p-lead__title{
+  font-size: 4.8rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.p-lead__text{
+  margin-top: 4rem;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.2;
+}

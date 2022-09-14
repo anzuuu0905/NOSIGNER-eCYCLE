@@ -1,19 +1,34 @@
-<footer id="footer" class="c-footer">
-  <div class="inner-block">
-    <nav>
-      <ul>
-        <% for(let page in jsonData.pages){ %>
-        <li><a href="<%= jsonData.pages[page].slug %>"><%= jsonData.pages[page].name %></a></li>
-        <% }; %>
-      </ul>
-    </nav>
-    <p><small>（c）<%= jsonData.siteInfo.name %></small></p>
-  </div><!-- /inner-block -->
+<footer id="footer" class="l-footer p-footer">
+  <div class="p-footer__inner">
+    <a href="./" class="p-footer__logo">
+      <p>
+        <img src="../../img/common/footer-logo.svg" alt="いいサイクル千代田">
+      </p>
+    </a>
+    <div class="p-footer__nav-wrapper">
+      <nav class="p-footer__nav">
+        <ul class="p-footer__menu">
+          <% for(let page in jsonData.footer){ %>
+          <li><a href="<%= jsonData.footer[page].slug %>"><%= jsonData.footer[page].name %></a></li>
+          <% }; %>
+        </ul>
+      </nav>
+        <div class="p-footer__textbox">
+          <p>※本事業は株式会社まち未来製作所と千代田区が連携協定を締結し実施しています
+          </p>
+          <p>
+            <small>
+              &copy;<%= jsonData.siteInfo.name %>
+            </small>
+          </p> 
+        </div>
+    </div>
+  </div>
 </footer>
 
-<div id="pagetop" class="c-pagetop"><a href="#wrapper"><img src="/img/common/pagetop.png" alt="↑"></a></div>
+<div id="pagetop" class="c-pagetop"><a href="#wrapper"><img src="../../img/svg/arrow-down-solid.svg" alt="">Top</a>
+</div>
 
-</div><!-- /wrapper -->
 
 <script src="/js/lib/svgxuse.min.js"></script>
 <script src="/js/lib/jquery-3.6.0.min.js"></script>

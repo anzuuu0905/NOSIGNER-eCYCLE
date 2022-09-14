@@ -1,6 +1,6 @@
 {
   "siteInfo": {
-    "name": "サイト名",
+    "name": "株式会社まち未来製作所",
     "siteUrl": "サイトのドメイン"
   },
   "pages": {
@@ -10,11 +10,47 @@
       "type": "website",
       "slug": "/"
     },
-    "news": {
-      "name": "ニュースページ",
-      "description": "ニュースページの説明",
+    "about": {
+      "name": "e.CYCLEとは",
+      "description": "",
       "type": "article",
-      "slug": "/news/"
+      "slug": "/#ecycle"
+    },
+    "merit": {
+      "name": "ご参加メリット",
+      "description": "",
+      "type": "article",
+      "slug": "/#merit",
+      "subpages":{
+        "chiyoda":{
+          "name":"千代田区の<br>事業者のみなさま",
+          "slug": "/#tab01"
+        },
+        "plant":{
+          "name":"再エネ発電所の<br>みなさま",
+          "slug": "/#tab02"
+        },
+        "electric":{
+          "name":"小売電気事業者の<br>みなさま",
+          "slug": "/#tab03"
+        }
+      }
+    },
+    "partner": {
+      "name": "パートナー地域",
+      "description": "",
+      "type": "article",
+      "slug": "/#partner"
+    }
+  },
+  "footer": {
+    "menu1": {
+      "name": "株式会社 まち未来製作所",
+      "slug": ""
+    },
+    "menu2": {
+      "name": "プライバシーポリシー ",
+      "slug": ""
     }
   },
   "steplist": {
