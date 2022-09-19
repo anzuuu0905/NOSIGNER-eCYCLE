@@ -11,6 +11,10 @@ c-common-title
   letter-spacing: 0.04em;
   color:$font-color2;
   text-align: center;
+  @include sp{
+    font-size: 2.4rem;
+    line-height: 1.583;
+  }
 }
 
 .c-common-title.font-color1{

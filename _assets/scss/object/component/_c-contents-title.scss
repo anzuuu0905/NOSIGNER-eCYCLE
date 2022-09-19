@@ -11,4 +11,8 @@ c-contents-title
   letter-spacing: 0.04em;
   color:$font-color2;
   text-align: center;
+  @include sp{
+    font-size: 2rem;
+    // line-height: 1.5;
+  }
 }

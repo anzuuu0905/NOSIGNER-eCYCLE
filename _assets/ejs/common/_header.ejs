@@ -23,10 +23,11 @@
   <link rel="stylesheet" type="text/css" href="/css/style.css">
 
   <script src="/js/lib/b_browser_switcher.js"></script>
+  <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+  <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
 </head>
 
 <body>
-
   <div id="wrapper">
     <header id="header" class="p-header">
       <div class="p-header__inner">
@@ -35,43 +36,23 @@
             <img src="../../img/common/header-logo.svg" alt="いいサイクル千代田">
           </h1>
         </a>
-        <nav class="p-header__nav">
-          <ul class="p-header__menu">
-            <% for(let page in jsonData.pages){ %>
-            <% if (page === pageId) { %>
-            <!-- <li class="current"> -->
-                <!-- <%= jsonData.pages[page].name %> -->
-            <% } else { %>
-              <% console.log(page) %>              <% if (page === 'about') { %>
-                <li>
-                  <a href="<%= jsonData.pages[page].slug %>"><img src="../img/svg/logo.svg" alt="e.cycle">とは
-                  </a>
-                </li>
-                      <% } else { %>
-                
-              <li>
-                <a href="<%= jsonData.pages[page].slug %>"><%- jsonData.pages[page].name %>
-                  <% if (typeof jsonData.pages[page].subpages !== 'undefined') { %>
-                    <span></span>
-                    <% }; %>
-                  </a>
-                <% if (typeof jsonData.pages[page].subpages !== 'undefined') { %>
-                  <ul class="p-header__submenu">
-                  <% for(let subpage in jsonData.pages[page].subpages){ %>
-                    <% console.log(jsonData.pages[page].subpages[subpage].name); %>
-                    <li>
-                      <a href="<%= jsonData.pages[page].subpages[subpage].slug %>"><%- jsonData.pages[page].subpages[subpage].name %>
-                      </a>
-                    </li>
-                    <% }; %>
-                  </li>
-                </ul>
-              <% }; %>
-            <% }; %>
-            </li>
-            <% } %>
-            <% }; %>
-          </ul>
+        <nav class="p-header__nav u-hidden-sp">
+          <%- include('../parts/_p-header-menu') %>
         </nav>
+    <!-- スマホのみ表示 -->
+    <div class="p-header__menubox u-hidden-pc">
+      <div class="p-header__drawer c-hamburger js-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="js-overlay p-header__overlay u-hidden-pc">
+      <div class="p-drawer-menu js-drawer-menu  l-inner u-hidden-pc">
+        <nav class="p-drawer-menu__menu">
+          <%- include('../parts/_p-header-menu') %>
+        </nav>
+      </div>
+    </div>
       </div><!-- /l-inner -->
     </header>

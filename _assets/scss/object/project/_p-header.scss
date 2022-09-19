@@ -4,13 +4,27 @@
 /* --------------------------------
 p-header
 ----------------------------------- */
-.p-model{
-padding-top: 100px;
-}
 
 .p-header{
-  position: fixed;
   width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.p-header.m_fixed{
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: $bg-color1;
+  transition: all 0.3s;
+
+  img{
+    width: 9.77rem;
+  }
+  .p-header__menu{
+    padding-top: 1.5rem;
+  }
 }
 
 .p-header__inner{
@@ -18,10 +32,24 @@ padding-top: 100px;
   display: flex;
   justify-content: space-between;
   padding: 1.5rem;
+  @include sp{
+    padding: 2rem;
+  }
 }
 
 .p-header__logo{
   padding: 1.5rem;
+  @include sp{
+    padding: 0.5rem 0;
+    // padding: 0;
+    }
+  }
+
+.p-header__logo img{
+  @include sp{
+    width: 15.92rem;
+      // width: 159.2px;
+  }
 }
 
 .p-header__menu{
@@ -30,6 +58,15 @@ padding-top: 100px;
   height: auto;
   font-weight: 700;
   letter-spacing: 0.02em;
+  @include sp{
+    display: block;
+  }
+}
+
+.p-header__menu > li{
+  @include sp{
+    border-top: 2px solid $border-color4;
+  }
 }
 
 .p-header__menu a{
@@ -38,15 +75,23 @@ padding-top: 100px;
   display: flex;
   align-items: center;
   font-size: 1.4rem;
+  @include sp{
+    padding: 1.7rem 0;
+    font-size: 2rem;
+  }
 }
 
+
 .p-header__menu img{
-  width: 11.24rem;
+  width: 8.1rem;
 }
 
 .p-header__menu li{
   display: flex;
   position: relative;
+  @include sp{
+    display: block;
+  }
 }
 
 .p-header__menu li a span{
@@ -54,30 +99,65 @@ padding-top: 100px;
   width: 1.055rem;
   height: 0.615rem;
   margin-left: 1rem;
+  @include sp{
+    display: none;
+  }
 }
 
 .p-header__submenu {
-  display: block;
+  display: none;
   position: absolute;
   top: 5.5rem;
   left: 1.5rem;
   width: 14.8rem;
   background: $bg-color1;
   border-radius: 1rem;
+  @include sp{
+    position: relative;
+    display: block;
+    width: 100%;
+    position: initial;
+    padding: 0;
+
+  }
+}
+
+.p-header__submenu-have{
+  @include sp{
+    padding-bottom: 2rem;
+  }
+}
+
+.p-header__submenu-have > a{
+  @include sp{
+    padding: 2.7rem 0 1rem;
+    font-size: 1.6rem;
+  }
+}
+
+.p-header__submenu-have:hover .p-header__submenu {
+  display: block;
+}
+
+.p-header__submenu:hover {
+  display: block;
 }
 
 .p-header__submenu a {
   width: 100%;
-  padding: 1.4rem;
+  padding: 1.2rem 1.4rem;
   font-weight: 500;
   color: $font-color1;
+  line-height: 1.4285;
   border-bottom: 1px solid $border-color2;
+  box-sizing: border-box;
+  @include sp{
+    padding: 1rem 0;
+    border: none;
+  }
 }
 
-// .p-header__submenu a:last-of-type{
-//   border-bottom: none;
-// }
-
-body{
-  background: $font-color4;
+.p-header__submenu li:last-of-type a{
+  border-bottom: none;
 }
+

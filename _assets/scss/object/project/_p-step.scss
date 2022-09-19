@@ -5,10 +5,13 @@
 p-step
 ----------------------------------- */
 .p-step{
-  margin-top: 8rem;
+  margin-top: 7.5rem;
   padding: 6rem 4rem 4rem;
   background: $bg-color5;
   border-radius: 20px;
+  @include sp{
+    padding: 4rem 2rem 4rem;
+  }
 }
 
 .p-step__title{
@@ -16,11 +19,50 @@ p-step
   font-weight: 700;
   color: $font-color2;
   text-align: center;
+  @include sp{
+    font-size: 1.8rem;
+  }
 }
 
-.p-step__contents {
+.p-step__titlebox{
+  // position: relative;
+  display: flex;
+  justify-content: center;
+  // margin: 0 auto;
+}
+.p-step__title{
+  display: inline-block;
   position: relative;
-  margin: 7rem auto 0;
+  line-height: 1.5;
+}
+
+.p-step__title::before,
+.p-step__title::after{
+  content:"";
+  height: 3rem;
+  // width: 0.2rem;
+  position: absolute;
+  border-left: 2px solid $bg-color6;
+  top: 20%;
+  // transform: translateY(-50%);
+  @include sp{
+    height: 4rem;
+  }
+}
+
+.p-step__title::before{
+  left: -2rem;
+  transform: rotate(-15deg)
+}
+
+.p-step__title::after{
+  right: -2rem;
+  transform: rotate(15deg)
+}
+
+  .p-step__contents {
+  position: relative;
+  margin: 6.5rem auto 0;
   padding: 4rem;
   width: 54rem;
   max-width: 100%;
@@ -28,6 +70,9 @@ p-step
   border-radius: 20px;
   box-sizing: border-box;
   background: $bg-color1;
+  @include sp{
+    padding: 5rem 2rem 2.6rem;
+  }
 }
 
 .p-step__contents::before{
@@ -39,6 +84,12 @@ p-step
   left: 50%;
   transform: translateX(-50%);
   box-sizing: border-box; 
+}
+
+.p-step__contents:first-of-type{
+  @include sp{
+    margin: 5rem auto 0;
+  }
 }
 
 .p-step__contents:first-of-type::before{
@@ -77,4 +128,8 @@ p-step
 .p-step__contents-5::after{
   background: url(../../img/common/5.jpg);
   background-size: cover;
+}
+
+.p-step__list .c-contents-title{
+  line-height: 1.5;
 }

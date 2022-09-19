@@ -8,16 +8,26 @@ c-ecycle-copy
 .c-ecycle-copy{
   font-size: 3.6rem;
   color: $font-color2;
+  @include sp{
+    font-size: 3.5rem;
+    // line-height: 2;
+  }
 
 }
 
 .c-ecycle-copy img{
+  width: 20.8rem;
   margin-right: 1rem;
-  width: 22rem;
+  @include sp{
+    width: 22rem;
+  }
 }
 
 .c-ecycle-copy p{
   line-height: 1.67;
   display: flex;
   align-items: center;
+  @include sp{
+    line-height: 1.5;
+  }
 }

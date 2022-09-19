@@ -1,0 +1,103 @@
+@use '../../mixin/mixin' as *;
+@use '../../setting/setting' as *;
+
+.c-hamburger{
+  background: $bg-color1;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  box-shadow: 0 0 1rem rgba(0, 158, 140, 0.3);
+  z-index:9999;
+}
+ 
+.c-hamburger span {
+  position: relative;
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 0.2rem;
+  width: 1.8rem;
+  background: $border-color1;
+  transition: ease .3s;
+  top: 1.7rem;
+}
+ 
+
+.c-hamburger span:nth-child(2) {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/*OPEN時の動き*/
+.c-hamburger.open span:nth-child(1) {
+  top: 2.3rem;
+  left: 1.3rem;
+  transform: rotate(315deg);
+}
+
+.c-hamburger.open span:nth-child(2) {
+  transform: translateY(-50%);
+  opacity: 0;
+}
+
+.c-hamburger.open span:nth-child(3) {
+  top: 1rem;
+  left: 1.3rem;
+  transform: rotate(-315deg);
+}
+
+.c-hamburger.open {
+  background: $bg-color8;
+}
+
+.c-hamburger.open span {
+  background: $border-color3;
+  width: 2.5rem;
+}
+
+
+.p-header__overlay {
+  @include sp{
+    background-color: $bg-color1;
+    width: 100vw;
+    height: 51.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: none;
+    border-radius: 0 0 2rem 2rem;
+  }
+}
+
+.p-drawer-menu {
+	width: 100%;
+	height: 100vh;
+	z-index: 100;
+  margin-top: 13.6rem;
+	// display: none;
+	position: relative;
+	// background-color: $background;
+}
+
+.p-drawer-menu__items {
+	margin-top: 2rem;
+}
+
+.p-drawer-menu__item {
+	// border-left: 0.5rem solid $text-color2;
+	// border-bottom: 0.1rem solid $border-color;
+}
+
+.p-drawer-menu__item a {
+	font-weight: 800;
+	text-transform: uppercase;
+	font-size: 2rem;
+	// color: $text-color;
+	display: block;
+	width: 100%;
+	text-decoration: none;
+	padding: 1.5rem;
+	line-height: 1;
+}

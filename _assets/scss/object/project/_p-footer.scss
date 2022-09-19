@@ -6,7 +6,8 @@ p-footer
 ----------------------------------- */
 .p-footer{
   width: 100%;
-  background: $bg-color2;
+  // background: $bg-color2;
+  background: linear-gradient(to bottom right, $bg-color2, $font-color2);
   position: relative;
 }
 
@@ -14,10 +15,23 @@ p-footer
   display: flex;
   justify-content: space-between;
   padding: 2rem 2.5rem 3.5rem;
+  @include sp{
+    flex-direction: column;
+    padding: 2rem 2rem 4rem;
+  }
 }
 
 .p-footer__logo{
   padding: 1.5rem;
+  @include sp{
+    padding: 0;
+  }
+}
+
+.p-footer__logo img{
+  @include sp{
+    width: 11.6rem;
+  }
 }
 
 .p-footer__menu{
@@ -27,6 +41,10 @@ p-footer
   justify-content: end;
   font-weight: 500;
   letter-spacing: 0.05em;
+  @include sp{
+    padding-top: 3.5rem;
+    margin-right: -0.5rem;
+  }
 }
 
 .p-footer__menu a{
@@ -37,6 +55,9 @@ p-footer
   font-size: 1.2rem;
   line-height: 1;
   text-decoration: underline;
+  @include sp{
+    padding: 0.5rem;
+  }
 }
 
 .p-footer__menu img{
@@ -57,8 +78,15 @@ p-footer
   line-height: 2;
   color: $font-color3;
   text-align: right;
+  @include sp{
+    padding-right: 0;
+    padding-top: 1rem;
+  }
 }
 
-.p-footer__text small{
-
+.p-footer__textbox small{
+  @include sp{
+    padding-top: 1rem;
+    // display: block;
+  }
 }

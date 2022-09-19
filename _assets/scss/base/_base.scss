@@ -7,13 +7,22 @@ html {
   font-family: "Zen Kaku Gothic New", YuGothic, "游ゴシック";
   font-weight: 500;
   font-size: 62.5%;
+  letter-spacing :0.04em;
   // font-size: 1.6rem;
   color: $font-color1;
-  background: $bg-color3;
+  // background: $bg-color3;
   line-height: 1.7;
   word-break: break-all;
+
   @include max(1180) {
     font-size: calc((10/1180) * 100vw);
+  }
+  @include max(768) {
+    // font-size: calc((10/768) * 100vw);
+    font-size: 62.5%; // 1rem = 10px
+}
+  @include max(375) {
+    font-size: calc((10/375) * 100vw);
   }
   // @include min(1180) {
   //   font-size: 62.5%; // 1rem = 10px
@@ -21,8 +30,11 @@ html {
 }
 
 body {
-  background: #fff;
+  // background: #fff;
   margin: 0;
+  z-index: -10;
+  position: relative;
+
 }
 
 *,
@@ -46,6 +58,7 @@ p {
 }
 
 a {
+  font: inherit;
   color: #000;
   text-decoration: none;
   transition: $transition01;
@@ -67,6 +80,7 @@ button {
   border-radius: 0;
   outline: none;
   appearance: none;
+  font: inherit;
 }
 
 select::-ms-expand {
@@ -113,6 +127,8 @@ h6 {
 
 main {
   display: block;
+  position: relative;
+  z-index: -10;
 }
 
 .l-inner {
@@ -130,6 +146,8 @@ main {
 
 #wrapper {
   position: relative;
+  z-index: -10;
+  // position: relative;
 }
 
 dl,dt,dd {

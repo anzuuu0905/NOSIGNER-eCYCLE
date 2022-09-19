@@ -11,6 +11,12 @@ p-mv
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: relative;
+  @include sp{
+    background: url(../../../img/common/kv-sp.jpg);
+    // background-position: top;
+    background-size: contain;
+  }
 }
 
 .p-mv__inner{
@@ -33,15 +39,76 @@ p-mv
   color: $font-color2;
   letter-spacing: 0.04em;
   position: absolute;
-  top: 50%;
+  top: 53%;
   transform: translateY(-50%);
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: start;
+  @include sp{
+    font-size: 3rem;
+    // top: 28.325%;
+    top: max(19.458%, 15.8rem);
+    transform: translateY(0);
+  }
 }
 
 .p-mv__title span{
+  // width: initial;
   background: $bg-color1;
   padding: 2.3rem 2.4rem;
   margin-bottom: 2rem;
   line-height: 1;
-  display: block;
+  display: inline-block;
   border-radius: 1.4rem;
+  @include sp{
+    padding: 1.6rem 1.4rem;
+    margin-bottom: 1rem;
+  }
 }
+
+.p-mv__btn {
+  position: absolute;
+  content: "";
+  width: 18rem;
+  height: 18rem;
+  bottom: 4rem;
+  right: 4rem;
+  line-height: 1.5;
+  border-radius: 50%;
+  background: linear-gradient($bg-color2, $bg-color6);
+
+  @include sp{
+    width: calc(100% - 2 * $padding-sp);
+    height: initial;
+    left: 50%;
+    right: 0;
+    transform: translateX(-50%);
+    border-radius: 10rem;
+    background: linear-gradient(to bottom right, $bg-color2, $font-color2);
+    padding: 2rem 2.5rem;
+    // bottom: 2rem;
+    font-size: 2rem;
+  }
+}
+
+.p-mv__btn:hover{
+  transform:scale(1.1);
+  @include sp{
+    transform: initial;
+  }
+}
+
+
+// .c-request-btn {
+//   width: 18rem;
+//   height: 18rem;
+//   bottom: 4rem;
+//   right: 4rem;
+//   line-height: 1.5;
+//   border-radius: 50%;
+//   background: linear-gradient($bg-color2, $bg-color6);
+// }
+
+// .c-request-btn:hover{
+//   transform:scale(1.1);
+// }

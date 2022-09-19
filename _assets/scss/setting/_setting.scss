@@ -4,8 +4,8 @@
 $placeholderColor: #c3c3c3;
 
 // メディアクエリの基準幅
-$bp-sp: 375px;
-$bp-pc: 376px;
+$bp-sp: 767px;
+$bp-pc: 768px;
 // $bp-tab: $bp-pc - 1px;
 
 // vwの基準となる幅 →320px=スマホ最小
@@ -19,20 +19,26 @@ $or: #ff6c08;
 $bl: #0042a8;
 $bl02:#00217c;
 
-$font-color1:#707070;
+$font-color1:#505050;
+$font-color1-op:rgba(50,50,50,0.5);
 $font-color2:#009E8C;
 $font-color3:#FFFFFF;
 $font-color4:#D8D8D8;
+$font-color5:#707070;
 $bg-color1:#FFFFFF;
 $bg-color2:#1B9DB8;
 $bg-color3:#E5F5F3;
 $bg-color4:#D8D8D8;
 $bg-color5:#ECECEC;
+$bg-color6:#009E8C;
+$bg-color7:#FFC6C6;
+$bg-color8:#505050;
 $border-color1:#009E8C;
 $border-color2:#D8D8D8;
 $border-color3:#FFFFFF;
+$border-color4:#EDEDED;
 // 共通余白設定
-$padding-pc:25px;
+$padding-pc:30px;
 $padding-sp:20px;
 $l-inner:940px;
 

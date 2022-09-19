@@ -6,34 +6,57 @@ p-request
 ----------------------------------- */
 .p-request{
   background: url(../../../img/common/kv_g.jpg);
-  height: 56.5vw;
+  height: 41.667vw;
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
   position: relative;
+  @include sp{
+    height: 89.33vw;
+    background-size: cover;
+    margin-top: 10rem;
+  }
 }
 
-.p-request::after{
+.p-request__img{
   content: "";
   position: absolute;
-  top: 50px;
+  bottom: 0;
   right: 0;
   background:url(../../../img/common/japan_1.png);
-  width: 110rem;
+  width: calc(110rem - 2.2rem) ;
   max-width: 76.389vw;
-  height: 52.778vw;
+  height: 82rem;
+  // height: calc(82rem - 6.8rem + 1.2rem);
   z-index: 10;
-  background-size: contain;
-  background-position:center;
+  background-size: cover;
+  background-position:bottom -6.8rem right -2.2rem;
   background-repeat: no-repeat;
+  @include sp{
+    display: none;
+  }
 }
 
 .p-request__wrapper{
-  padding-top: 20.5rem;
+  padding-top: 15.5rem;
+  @include sp{
+    padding-top: 0;
+  }
 }
 
 .p-request__box{
   width: 62rem;
   max-width: 100%;
   margin: 0 auto;
+  @include sp{
+    padding:  0 2rem;
+  }
+}
+
+.p-request .c-request-btn{
+  margin-top: 4rem;
+  @include sp{
+    margin-top: 1rem;
+    width: 100%;
+  }
 }

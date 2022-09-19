@@ -6,6 +6,10 @@ p-value
 ----------------------------------- */
 .p-value__list {
   margin-top: 1.6rem;
+  @include sp{
+    padding-top: 1rem;
+    margin-top: 0;
+  }
 }
 
 .p-value__contents {
@@ -18,6 +22,10 @@ p-value
   border-radius: 20px;
   box-sizing: border-box;
   background: $bg-color3;
+  @include sp{
+    padding: 5.5rem 2rem 2rem;
+    margin: 9.5rem auto 0;
+  }
 }
 
 .p-value__contents::after{
@@ -36,10 +44,22 @@ p-value
   background: url(../../img/common/icon-1.png);
   background-size: cover;
 }
-.p-value__contents-2::after{
+
+.p-value__list-1 .p-value__contents-2::after{
   background: url(../../img/common/icon-2.png);
   background-size: cover;
 }
+
+.p-value__list-2 .p-value__contents-2::after{
+  background: url(../../img/common/icon-4.png);
+  background-size: cover;
+}
+
+.p-value__list-3 .p-value__contents-2::after{
+  background: url(../../img/common/icon-5.png);
+  background-size: cover;
+}
+
 .p-value__contents-3::after{
   background: url(../../img/common/icon-3.png);
   background-size: cover;
@@ -48,9 +68,23 @@ p-value
 .p-value__contents .c-contents-text{
   font-size: 1.6rem;
   letter-spacing: 0.02em;
+  @include sp{
+    font-size: 1.4rem;
+  }
 }
 
 .p-value__annotation {
-  margin: 4rem auto 0;
+  margin: 4.5rem auto 0;
   width: 100%;
+  line-height: 1.8;
+  color:$font-color5;
+  @include sp{
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    margin: 3.5rem auto 0;
+  }
+}
+.p-value__annotation a{
+  color: $font-color2;
+  text-decoration: underline;
 }

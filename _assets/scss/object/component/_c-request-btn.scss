@@ -1,10 +1,25 @@
-@use '../../mixin/mixin' as *;
+@use '../..//mixin/mixin' as *;
+@use '../../setting/setting' as *;
+
 
 /* --------------------------------
-c-pagetop
+c-request-btn
 ----------------------------------- */
 .c-request-btn{
-  margin-top: 5.6rem;
+  margin-top: 3.5rem;
+  width: 100%;
+  border-radius: 10rem;
+  padding: 1.7rem;
+  background: linear-gradient(to bottom right, $bg-color2, $font-color2);
+  // background: $bg-color2;
+  @include sp{
+    margin-top: 4rem;
+    padding: 2.2rem;
+  }
+}
+
+.c-request-btn:hover{
+  box-shadow: none;  
 }
 
 .c-request-btn__annotation{
@@ -13,4 +28,7 @@ c-pagetop
   letter-spacing: 0.02em;
   margin-top: 2rem;
   text-align: center;
+  @include sp{
+   font-size: 1.4rem; 
+  }
 }

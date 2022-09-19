@@ -6,7 +6,22 @@ p-model
 ----------------------------------- */
 
 .p-model{
+  padding-top: 12rem;
+  @include sp{
+    padding-top: 2.5rem;
+  }
+}
+
+.p-model__inner{
   position: relative;
+  margin: 0 auto;
+  width: 1440px;
+  max-width: 100%;
+  @include sp{
+    width: 100%;
+    padding: 7rem 2rem 20rem;
+    // margin-top: 14rem;
+  }
 }
 
 .p-model__copybox{
@@ -17,26 +32,43 @@ p-model
   font-size: 2.4rem;
   font-weight: 700;
   letter-spacing: 0.04em;
+  @include sp{
+    font-size: 1.8rem;
+  }
 }
 
 .p-model__copybox img{
-  margin-top: 2.3rem;
+  margin-top: 1.3rem;
   width: 45.8rem;
   max-width: 100%;
+  @include sp{
+    margin-top: 2rem;
+    width: 28rem;
+  }
 }
 
 .p-model__textbox{
   width: 78rem;
   max-width: 100%;
-  margin: 4rem auto 0;
+  margin: 5.4rem auto 0;
+  @include sp{
+    margin-top: 3rem;
+  }
 }
 
 .p-model__text{
-  margin-top: 4rem;
+  margin-top: 3.2rem;
   font-size: 1.8rem;
   line-height: 1.778;
   letter-spacing: 0.04em;
   font-weight: 500;
+  @include sp{
+    font-size: 1.6rem;
+    line-height: 1.75;
+    margin-top: 1.5rem;
+
+
+  }
 }
 
 .p-model__cycle{
@@ -45,6 +77,10 @@ p-model
   width: 59.2rem;
   max-width: 100%;
   height: 59.2rem;
+  @include sp{
+    height: 29.5rem;
+    width: 29.5rem;
+  }
 }
 
 .p-model__cycle img{
@@ -58,49 +94,96 @@ p-model
   border-radius: 50%;
   width: 26rem;
   position: absolute;
+  @include sp{
+    width: 14rem;
+  }
 }
 
 .p-model__img img:nth-of-type(1){
-  top: -29.3rem;
+  top: -39.3rem;
   left: 13rem;
+  @include sp{
+    top: -17.5rem;
+    left: -2.5rem;
+  }
 }
 .p-model__img img:nth-of-type(2),
 .p-model__img img:nth-of-type(5),
 .p-model__img img:nth-of-type(6){
   width: 14rem;
+  @include sp{
+    width: 10rem;
+  }
 }
 
 .p-model__img img:nth-of-type(2){
-  top: -8.4rem;
+  top: -20.4rem;
   right: 27rem;
+  @include sp{
+    top: -11.4rem;
+    left: 15.4rem;
+  }
 }
 
 .p-model__img img:nth-of-type(3){
-  top: 2.7rem;
+  top: -9.3rem;
   left: 0;
+  @include sp{
+    top: initial;
+    bottom: -2.3rem;
+    left: -3.8rem;
+  }
 }
 
 .p-model__img img:nth-of-type(4){
-  top: 4rem;
+  top: -2rem;
   right: 0;
+  @include sp{
+    width: 10rem;
+    top: initial;
+    bottom: 4.1rem;
+    left: 12.1rem;
+    right: initial;
+  }
 }
 
 .p-model__img img:nth-of-type(5){
-  top: 31.7rem;
+  top: 20.7rem;
   left: 21rem;
+  @include sp{
+    width: 10rem;
+    top: initial;
+    bottom: -7.3rem;
+    left: initial;
+    right: 9.8rem;
+  }
 }
 
 .p-model__img img:nth-of-type(6){
-  top: 39.6rem;
+  top: 27.6rem;
   right: 21rem;
+  @include sp{
+    display: none;
+  }
 }
 
 .p-model__img img:nth-of-type(7){
-  top: 52.7rem;
+  top: 40.7rem;
   left: 5rem;
+  @include sp{
+    top: -20.5rem;
+    right: -4.6rem;
+    left: initial;
+  }
 }
 
 .p-model__img img:nth-of-type(8){
-  top: 63.6rem;
+  top: 51.6rem;
   right: 5rem;
+  @include sp{
+    // width: 10rem;
+    top: initial;
+    bottom: -1.7rem;
+    right: -4.2rem;
+  }
 }
