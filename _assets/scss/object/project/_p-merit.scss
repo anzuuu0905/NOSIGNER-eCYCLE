@@ -25,7 +25,7 @@ p-merit
 //     width: 100vw;
 //     height: 12rem;
 //     transform: scale(1, -1);
-//     background:url(../../../img/common/wh.png);
+//     background:url(..//img/common/wh.png);
 //     background-size: cover;
 //     background-repeat: no-repeat;
 //     background-position: top;
@@ -93,7 +93,7 @@ p-merit
 .p-merit__inner::before{
   // @include max(9999){
     content: "";
-    background: url(../../../img/common/white-top.png);
+    background: url(..//img/common/white-top.png);
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -112,7 +112,7 @@ p-merit
 .p-merit__inner::after{
   // @include max(1200){
     content: "";
-    background: url(../../../img/common/white-bottom.png);
+    background: url(..//img/common/white-bottom.png);
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -140,7 +140,7 @@ p-merit
 
 .p-merit__tabarea.bottom::after{
   content: "";
-  background: url(../../../img/common/white-bottom.png);
+  background: url(..//img/common/white-bottom.png);
   position: absolute;
   top: 9.6rem;
   left: 50%;

@@ -5,7 +5,7 @@
 .modal-overlay {
   align-items: center;
   // background: linear-gradient($bg-color2, $bg-color6);
-  background: url(../../../img/common/kv.jpg);
+  background: url(..//img/common/kv.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -50,7 +50,7 @@
 }
 
 .modal-button{
-  padding: 6rem 4rem;
+  // padding: 6rem 4rem;
   font-size: 2.4rem;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -61,6 +61,10 @@
   margin-right: 2rem;
   width: calc((100% - 20px * 2) / 3) ;
   position: relative;
+  a{
+    display: block;
+    padding: 6rem 4rem;
+  }
 }
 
 .modal-button::after{
@@ -69,8 +73,8 @@
   right: 2rem;
   bottom: 2rem;
   background:red;
-  // background: url(../../../img/svg/arrow-up-right-from-square-solid.svg);
-  background: url(../../../img/svg/arrow-up-right.svg);
+  // background: url(..//img/svg/arrow-up-right-from-square-solid.svg);
+  background: url(..//img/svg/arrow-up-right.svg);
   
   background-size: cover;
   background-repeat: no-repeat;

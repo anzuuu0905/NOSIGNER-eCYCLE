@@ -95,13 +95,19 @@ p-header
 }
 
 .p-header__menu li a span{
-  background: url(../../../img/svg/angle-down-solid.svg);
+  background: url(..//img/svg/angle-down-solid.svg);
   width: 1.055rem;
   height: 0.615rem;
   margin-left: 1rem;
+  background-size: cover;
+  background-position:center;
+  background-repeat:no-repeat;
   @include sp{
     display: none;
   }
+}
+.p-header__menu svg{
+  fill: $border-color1;
 }
 
 .p-header__submenu {
