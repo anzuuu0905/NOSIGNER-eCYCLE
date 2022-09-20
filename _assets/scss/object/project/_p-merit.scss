@@ -8,10 +8,10 @@ p-merit
 .p-merit{
   position: relative;
   z-index: -1;
-  background: linear-gradient($bg-color2-op, $bg-color6-op);
-  backdrop-filter: blur(10px) brightness(70%);
   // background: linear-gradient($bg-color2, $bg-color6);
-  // padding-top: max(13rem, 30vw);
+  background: linear-gradient($bg-color2-op, $bg-color6-op);
+  // backdrop-filter: blur(10px) brightness(70%);
+  mix-blend-mode: multiply;
   padding-top: max(13rem, 21vw);
   padding-bottom: max(13rem, 30vw);
   @include sp{
@@ -113,7 +113,8 @@ p-merit
     // border-bottom: 1px solid #009E8C;
   // }
   @include sp{
-    top: -52vw;
+    // top: -52vw;
+    top: -50vw;
   }
 }
 
@@ -136,10 +137,8 @@ p-merit
     border: none;
   // }
   @include sp{
-    // background-position:bottom;
-    // background-size: cover;
-    // bottom: -74.5vw;
-      bottom: -55vw;
+      // bottom: -55vw;
+      bottom: -52vw;
   }
 }
 .p-merit__tabarea.bottom{
@@ -227,6 +226,9 @@ p-merit
   left: 50%;
   transform: translateX(-50%);
   width: 75%;
+  @include sp{
+    display: none;
+  }
 }
 
 .p-merit__tab.current::after{

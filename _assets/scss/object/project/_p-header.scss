@@ -30,7 +30,7 @@ p-header
   top: 0;
   background: $bg-color1;
   transition: all 0.3s;
-
+  box-shadow: 0 0.4rem 2rem rgba(0, 158, 140, 0.2);
   img{
     width: 9.77rem;
   }
@@ -128,14 +128,17 @@ p-header
   top: 5.5rem;
   left: 1.5rem;
   width: 14.8rem;
-  // background: $bg-color1;
-  // border-radius: 1rem;
+  background: $bg-color1;
+  border-radius: 1rem;
+  box-shadow: 0 0.4rem 2rem rgba(0, 158, 140, 0.2);
+
   @include sp{
     position: relative;
     display: block;
     width: 100%;
     position: initial;
     padding: 0;
+    box-shadow: none;
   }
 }
 .p-header__submenu a {

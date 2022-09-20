@@ -16,7 +16,11 @@
   let timer = null;
   const $request_btn = $('#request_btn');
   // $request_btn.hide();
-
+  $request_btn.css({
+    'position': 'fixed',
+    'bottom': '20px',
+    'display':'block',
+  });
   // スクロールイベント
   $(window).on('scroll touchmove', function () {
 
@@ -112,6 +116,15 @@
       $(".js-content").hide().eq(index).fadeIn(300);
       $(".p-merit__tabarea.top .js-tab").eq(index).addClass("current");
       $(".p-merit__tabarea.bottom .js-tab").eq(index).addClass("current");
+
+
+
+      var speed = 400;
+      var href= $(this).attr("data-url");
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      var position = target.offset().top;
+      $('body,html').animate({scrollTop:position}, speed, 'swing');
+      return false;
     });
   });
 
@@ -148,8 +161,110 @@
 
 })(jQuery);
 
+// モーダルアニメーション
 MicroModal.init({
   disableScroll: true,
   awaitOpenAnimation: true,
   awaitCloseAnimation: true
+});
+
+// フェードイン用の処理
+// gsap.fromTo('.js-fadein', { 
+//   y: 50, opacity:0//ここで初期状態を設定
+//   },
+//   {
+//   y: 0,  opacity:1 ,//ここでアニメーションさせたい内容を書く
+//     scrollTrigger: {
+//       trigger: '.js-fadein',
+//       start: 'top 80%'
+//     }
+//   }
+// );
+
+// gsap.fromTo('.js-imgfadein', { 
+//   y: 100,
+//   // opacity:0//ここで初期状態を設定
+//   },
+//   {
+//   y: 0,
+//   // opacity: 1 
+//     scrollTrigger: {
+//       trigger: '.js-imgfadein',
+//       start: 'top 70%'
+//     }
+//   }
+// );
+
+
+
+$(function(){
+  // 各項目のフェードイン
+  gsap.utils.toArray(".js-fadein").forEach(target => {
+    gsap.fromTo(target, { 
+      y: 50,
+      opacity:0//ここで初期状態を設定
+      },
+      {
+      y: 0,
+      opacity:1 ,//ここでアニメーションさせたい内容を書く
+        scrollTrigger: {
+          trigger: target,
+          start: 'top 80%'
+        }
+      }
+    );
+  });
+  // 丸抜き図形用のフェードイン
+  gsap.utils.toArray(".js-imgfadein").forEach(target => {
+    gsap.fromTo(target, { 
+      y: 100,
+      opacity:0//ここで初期状態を設定
+      },
+      {
+      y: 0,
+      opacity:1 ,//ここでアニメーションさせたい内容を書く
+      duration: 3, //５秒後かけてアニメーションさせる
+        scrollTrigger: {
+          trigger: target,
+          start: 'top 80%'
+        }
+      }
+    );
+  });
+
+  // // サイクルトリガー
+  // gsap.to('.js-cycle', {
+  //   opacity:1,
+  //   scrollTrigger: {
+  //     trigger: '.js-cycle-trigger',//アニメーションが始まるトリガーとなる要素。この要素が固定される
+  //     start: 'top top', //アニメーションが始まる位置
+  //     end: '+=750', //アニメーション開始位置から1000px固定する
+  //     pin: true, //トリガー要素を固定する
+  //     // pinnedContainer:".js-cycle-trigger",
+  //     pinReparent:true,
+  //     // pinSpacing: "margin",
+  //     // pin:".js-cycle-trigger #wraper"
+  //   },
+  //   stagger: {
+  //     from: "start",
+  //     amount: 1 //0.1秒ズラしてアニメーション
+  //     }
+  // });
+
+//   // マップトリガー
+  // gsap.to('.js-map', {
+  //   opacity:1,
+  //   scrollTrigger: {
+  //     trigger: '.js-map-trigger',//アニメーションが始まるトリガーとなる要素。この要素が固定される
+  //     start: 'top 10%', //アニメーションが始まる位置
+  //     end: '+=750', //アニメーション開始位置から1000px固定する
+  //     pin: true, //トリガー要素を固定する
+  //     pinnedContainer:".js-map-trigger",
+  //     // pin:".js-map-trigger #wraper"
+  //   },
+  //   stagger: {
+  //     from: "start",
+  //     amount: 1 //0.1秒ズラしてアニメーション
+  //   }
+  // });
 });

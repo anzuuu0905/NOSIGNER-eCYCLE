@@ -9,7 +9,7 @@
       <nav class="p-footer__nav">
         <ul class="p-footer__menu">
           <% for(let page in jsonData.footer){ %>
-          <li><a href="<%= jsonData.footer[page].slug %>"><%= jsonData.footer[page].name %></a></li>
+          <li><a href="<%= jsonData.footer[page].slug %>" target="_blank"><%= jsonData.footer[page].name %></a></li>
           <% }; %>
         </ul>
       </nav>

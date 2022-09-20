@@ -63,6 +63,7 @@
   border-radius: 2rem;
   margin-right: 2rem;
   width: calc((100% - 20px * 2) / 3) ;
+  transition: all 0.3s;
   position: relative;
   @include sp{
     width: 100%;
@@ -78,6 +79,10 @@
       padding: 3rem 4rem;
     }
   }
+}
+
+.modal-button:hover{
+  background: $bg-color6;
 }
 
 .modal-button::after{
