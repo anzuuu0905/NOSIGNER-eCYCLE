@@ -25,7 +25,7 @@
 .modal-overlay::before {
   position: absolute;
   content: "";
-  top: 80px;
+  top: 0;
   left: 0;
   width: inherit;
   height: inherit;;
@@ -39,6 +39,9 @@
   text-align: center;
   margin: 0 auto;
   color: $font-color3;
+  @include sp{
+    font-size: 2.4rem;
+  }
 }
 
 .modal-content {
@@ -61,9 +64,19 @@
   margin-right: 2rem;
   width: calc((100% - 20px * 2) / 3) ;
   position: relative;
+  @include sp{
+    width: 100%;
+    margin-right: 0;
+    margin-top: 1rem;
+  }
   a{
     display: block;
     padding: 6rem 4rem;
+    color: $font-color1;
+    @include sp{
+      font-size: 2rem;
+      padding: 3rem 4rem;
+    }
   }
 }
 
@@ -98,7 +111,10 @@
   width: 94rem;
   // overflow: hidden;
   max-height: 100vh;
-
+  top: 0;
+  @include sp{
+    margin-top: 11.4rem;
+  }
 }
 
 .modal-header {
@@ -111,6 +127,9 @@
 
 .modal-list{
   display: flex;
+  @include sp{
+    flex-direction: column;
+  }
 }
 
 .modal-open {
@@ -130,12 +149,19 @@
   text-decoration-thickness: 0.2rem;
   color: $font-color3;
   text-align: center;
+  @include sp{
+    margin-top: 3.2rem;
+    font-size: 1.6rem;
+  }
 }
 
 .modal-closebox{
   margin-top: 11.1rem;
   text-align: center;
   color: $font-color3;
+  @include sp{
+    margin-top: 7.3rem;
+  }
 }
 
 .modal-close-text{

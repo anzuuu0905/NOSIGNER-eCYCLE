@@ -59,8 +59,9 @@
 .p-header__overlay {
   @include sp{
     background-color: $bg-color1;
-    width: 100vw;
-    height: 51.5rem;
+    // width: 100vw;
+    // height: 51.5rem;
+    // height: 137.3vw;
     position: absolute;
     top: 0;
     left: 0;
@@ -68,12 +69,13 @@
     z-index: -1;
     display: none;
     border-radius: 0 0 2rem 2rem;
+    padding-bottom: 1rem;
   }
 }
 
 .p-drawer-menu {
-	width: 100%;
-	height: 100vh;
+	// width: 100vw;
+	// height: 100vh;
 	z-index: 100;
   margin-top: 13.6rem;
 	// display: none;

@@ -1,0 +1,40 @@
+@use '../..//mixin/mixin' as *;
+@use '../../setting/setting' as *;
+
+
+/* --------------------------------
+c-fixed-btn
+----------------------------------- */
+
+.c-fixed-btn {
+  position: absolute;
+  content: "";
+  width: 18rem;
+  height: 18rem;
+  // bottom: 4rem;
+  right: 4rem;
+  line-height: 1.5;
+  border-radius: 50%;
+  background: linear-gradient($bg-color2, $bg-color6);
+
+  @include sp{
+    width: calc(100% - 2 * $padding-sp);
+    height: initial;
+    left: 50%;
+    right: 0;
+    transform: translateX(-50%);
+    border-radius: 10rem;
+    background: linear-gradient(to bottom right, $bg-color2, $font-color2);
+    padding: 2rem 2.5rem;
+    // bottom: 2rem;
+    font-size: 2rem;
+  }
+}
+
+.c-fixed-btn:hover{
+  transform:scale(1.1);
+  @include sp{
+    transform: initial;
+  }
+}
+

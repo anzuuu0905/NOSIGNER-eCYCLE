@@ -5,12 +5,14 @@
 p-mv
 ----------------------------------- */
 .p-mv{
-  background: url(..//img/common/kv.jpg);
+  // background: url(..//img/common/kv.jpg);
+  background: initial;
   width: 100%;
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: relative;
   // position: fixed;
   @include sp{
     background: url(..//img/common/kv-sp.jpg);
@@ -41,9 +43,10 @@ p-mv
   position: absolute;
   top: 53%;
   transform: translateY(-50%);
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: start;
+  animation-name:fadeInAnime3;
+  animation-duration:3s;
+  animation-fill-mode:forwards;
+  opacity:0;
   @include sp{
     font-size: 3rem;
     // top: 28.325%;
@@ -51,6 +54,19 @@ p-mv
     transform: translateY(0);
   }
 }
+
+@keyframes fadeInAnime3{
+  0% {
+    opacity: 0;
+  }
+  66%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 
 .p-mv__title span{
   // width: initial;
@@ -98,17 +114,3 @@ p-mv
   }
 }
 
-
-// .c-request-btn {
-//   width: 18rem;
-//   height: 18rem;
-//   bottom: 4rem;
-//   right: 4rem;
-//   line-height: 1.5;
-//   border-radius: 50%;
-//   background: linear-gradient($bg-color2, $bg-color6);
-// }
-
-// .c-request-btn:hover{
-//   transform:scale(1.1);
-// }

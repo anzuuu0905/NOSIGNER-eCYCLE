@@ -24,15 +24,18 @@
         </div>
     </div>
   </div>
-  <!-- <div class="p-request__img"></div> -->
+  <div id="pagetop" class="c-pagetop">
+    <a href="#wrapper">
+    <span class="c-pagetop__arrow"></span>
+    Top</a>
+  </div>
 </footer>
-<div id="pagetop" class="c-pagetop">
-  <a href="#wrapper">
-  <!-- <img class="lazyload" src="/img/svg/arrow-down-solid.svg" alt=""> -->
-  <span class="c-pagetop__arrow"></span>
-  Top</a>
+
+
+
+<%- include('../parts/_c-modal-btn',  {id_name :"request_btn", class_name:'p-fixed__btn' ,btn_text:'ご参加<br class="u-hidden-sp">お申込みは<br class="u-hidden-sp">こちら'}) %>
 </div>
-</div>
+
 
 <script src="/js/lib/svgxuse.min.js"></script>
 <script src="/js/lib/jquery-3.6.0.min.js"></script>

@@ -4,15 +4,16 @@
 /* --------------------------------
 p-partner
 ----------------------------------- */
-// .p-partner{
-//   display: flex;
-// }
+.p-partner{
+  background: $bg-color1;
+}
 .p-partner__inner{
   // position: relative;
 }
 .p-partner__wrapper{
   margin-top: 9rem;
   display: flex;
+    padding-bottom: 18rem;
   @include sp{
     flex-direction: column;
   }
@@ -22,7 +23,7 @@ p-partner
   width: 38rem;
   max-width: 100%;
   @include sp{
-    margin-top: 4.3rem;
+    margin-top: 3.3rem;
   }
 }
 .p-partner__copy p{

@@ -5,7 +5,9 @@
 c-pagetop
 ----------------------------------- */
 .c-pagetop {
+  position: absolute;
   right: 3rem;
+  top: -2.5rem;
   width: 5rem;
   height: 5rem;
   // background: $bg-color2;
@@ -60,6 +62,7 @@ c-pagetop
 
 .c-pagetop a:hover{
   color: rgba(216,216,216,0.3);
+  opacity: 1;
 }
 
 .c-pagetop:hover{

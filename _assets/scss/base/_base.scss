@@ -64,7 +64,7 @@ a {
   transition: $transition01;
   @include pc {
     &:hover {
-      // opacity: .8;
+      opacity: 0.3;
     }
   }
 }
@@ -212,7 +212,7 @@ dl,dt,dd {
   }
 
   #wrapper {
-    min-width: 320px;
+    // min-width: 320px;
     position: relative;
     overflow: hidden;
   }

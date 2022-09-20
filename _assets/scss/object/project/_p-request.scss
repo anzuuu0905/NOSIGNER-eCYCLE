@@ -14,7 +14,16 @@ p-request
   @include sp{
     height: 89.33vw;
     background-size: cover;
-    margin-top: 10rem;
+  }
+}
+
+.p-request__inner{
+  position: relative;
+  z-index: -1;
+  padding: 0;
+  background: $bg-color1;
+  @include sp{
+    padding: 0;
   }
 }
 

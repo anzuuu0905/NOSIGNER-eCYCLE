@@ -12,10 +12,10 @@
   const mql = window.matchMedia(`screen and (max-width: ${breakpoint}px)`); //、MediaQueryListの生成
   let deviceFlag = mql.matches ? 1 : 0; // 0 : PC ,  1 : SP
 
-  // pagetop
+  // request_btn
   let timer = null;
-  const $pageTop = $('#pagetop');
-  $pageTop.hide();
+  const $request_btn = $('#request_btn');
+  // $request_btn.hide();
 
   // スクロールイベント
   $(window).on('scroll touchmove', function () {
@@ -26,29 +26,29 @@
     }
 
     // スクロール量が100pxを超えたら、200ms後にフェードイン
-    timer = setTimeout(function () {
-      if ($(this).scrollTop() > 100) {
-        $('#pagetop').fadeIn('normal');
-      } else {
-        $pageTop.fadeOut();
-      }
-    }, 200);
+    // timer = setTimeout(function () {
+    //   if ($(this).scrollTop() > 100) {
+    //     $('#request_btn').fadeIn('normal');
+    //   } else {
+    //     $request_btn.fadeOut();
+    //   }
+    // }, 200);
 
     const scrollHeight = $(document).height();
     const scrollPosition = $(window).height() + $(window).scrollTop();
     const footHeight = parseInt($('#footer').innerHeight()) -25;
+    const partnerHeight = parseInt($('#partner').innerHeight()) -25;
 
-
-    if (scrollHeight - scrollPosition <= footHeight - 20) {
+    if (scrollHeight - scrollPosition <= partnerHeight ) {
       // 現在の下から位置が、フッターの高さの位置にはいったら(bottom20px分を引いて調整)
-      $pageTop.css({
-        'position': 'absolute',
-        'bottom': footHeight,
+      $request_btn.css({
+        'display':'none',
       });
     } else {
-      $pageTop.css({
+      $request_btn.css({
         'position': 'fixed',
-        'bottom': '20px'
+        'bottom': '20px',
+        'display':'block',
       });
     }
 
