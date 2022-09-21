@@ -12,8 +12,10 @@
   const mql = window.matchMedia(`screen and (max-width: ${breakpoint}px)`); //、MediaQueryListの生成
   let deviceFlag = mql.matches ? 1 : 0; // 0 : PC ,  1 : SP
 
-  // request_btn
   let timer = null;
+  // 背景画像
+  const $p_fixed = $('.p-fixed__blur');
+  // request_btn
   const $request_btn = $('#request_btn');
   // $request_btn.hide();
   $request_btn.css({
@@ -29,22 +31,32 @@
       clearTimeout(timer);
     }
 
-    // スクロール量が100pxを超えたら、200ms後にフェードイン
-    // timer = setTimeout(function () {
-    //   if ($(this).scrollTop() > 100) {
-    //     $('#request_btn').fadeIn('normal');
-    //   } else {
-    //     $request_btn.fadeOut();
-    //   }
-    // }, 200);
+    const scrollHeight = $(document).height(); //サイトの高さ
+    const scrollTopPosition = $(window).scrollTop();//表示している画面の最上部の位置
+    const scrollPosition = $(window).height() + $(window).scrollTop();//表示している画面の最下部の位置
+    // const footHeight = parseInt($('#footer').innerHeight()) -25;
+    const partnerHeight = parseInt($('#partner').innerHeight()) -25;//パートナー企業の位置
+    const meritHeight = $('#p-merit').offset(); console.log('scrollH:',scrollHeight);
+    console.log('scrollP:',scrollPosition);
+    console.log('scrollTop:',scrollTopPosition);
+    console.log('MHEIGHT:',meritHeight);
 
-    const scrollHeight = $(document).height();
-    const scrollPosition = $(window).height() + $(window).scrollTop();
-    const footHeight = parseInt($('#footer').innerHeight()) -25;
-    const partnerHeight = parseInt($('#partner').innerHeight()) -25;
-
+    if (scrollPosition > meritHeight.top ){
+      $p_fixed.css({
+        // 'background-image':'url(../img/common/kv_blur.jpg)',
+        // 'display':'block',
+        'opacity':'1',
+      });
+    } else {
+      $p_fixed.css({
+        // 'background-image':'url(../img/common/kv.jpg)',
+        // 'display':'none',
+        'opacity':'0',
+      });
+    }
+    
     if (scrollHeight - scrollPosition <= partnerHeight ) {
-      // 現在の下から位置が、フッターの高さの位置にはいったら(bottom20px分を引いて調整)
+      // 現在の下から位置が、パートナーの高さの位置にはいったら
       $request_btn.css({
         'display':'none',
       });
@@ -117,8 +129,6 @@
       $(".p-merit__tabarea.top .js-tab").eq(index).addClass("current");
       $(".p-merit__tabarea.bottom .js-tab").eq(index).addClass("current");
 
-
-
       var speed = 400;
       var href= $(this).attr("data-url");
       var target = $(href == "#" || href == "" ? 'html' : href);
@@ -168,35 +178,7 @@ MicroModal.init({
   awaitCloseAnimation: true
 });
 
-// フェードイン用の処理
-// gsap.fromTo('.js-fadein', { 
-//   y: 50, opacity:0//ここで初期状態を設定
-//   },
-//   {
-//   y: 0,  opacity:1 ,//ここでアニメーションさせたい内容を書く
-//     scrollTrigger: {
-//       trigger: '.js-fadein',
-//       start: 'top 80%'
-//     }
-//   }
-// );
-
-// gsap.fromTo('.js-imgfadein', { 
-//   y: 100,
-//   // opacity:0//ここで初期状態を設定
-//   },
-//   {
-//   y: 0,
-//   // opacity: 1 
-//     scrollTrigger: {
-//       trigger: '.js-imgfadein',
-//       start: 'top 70%'
-//     }
-//   }
-// );
-
-
-
+// GSAPを使用したアニメーション
 $(function(){
   // 各項目のフェードイン
   gsap.utils.toArray(".js-fadein").forEach(target => {

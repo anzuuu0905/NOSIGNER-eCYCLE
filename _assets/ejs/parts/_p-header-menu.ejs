@@ -4,18 +4,14 @@
             <% if (page === pageId) { %>
             <% } else { %>
               <% if (page === 'about') { %>
-                <!-- li1 -->
                 <li>
                   <a href="<%= jsonData.pages[page].slug %>"><img class="lazyload" src="../img/svg/logo.svg" alt="e.cycle">とは
                   </a>
-                <!-- /li1 -->
                 </li>
               <% } else { %>
                 <% if (typeof jsonData.pages[page]. subpages !== 'undefined') { %>
-                    <!-- li4 -->
                   <li class="p-header__submenu-have">
                 <% } else { %>
-                  <!-- li4 -->
                   <li>
                         <% }%>
                       <a href="<%= jsonData.pages[page].slug %>"><%- jsonData.pages[page].name %>
@@ -27,21 +23,14 @@
                           <ul class="p-header__submenu">
                             <% for(let subpage in jsonData.pages[page].subpages){ %>
                               <% console.log(jsonData.pages[page].subpages[subpage].name); %>
-                              <!-- li2 -->
                               <li class="js-tab">
                                 <a href="<%= jsonData.pages[page].subpages[subpage].slug %>"><%- jsonData.pages[page].subpages[subpage].name %>
                                 </a>
-                              <!-- /li2 -->
                               </li>
                             <% }; %>
-                            <!-- /li3 -->
-                           <!-- </li> -->
                           </ul>
-                    <!-- /li4 -->
-                  
                 <% }; %>
               </li>
-              <!-- /l4test -->
               <% }; %>
             <% } %>
           <% }; %>

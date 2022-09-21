@@ -1,4 +1,9 @@
 <%# ご参加お申し込みはこちら　%>
-<button data-micromodal-trigger="modal-1" id="<%- id_name %>" class="c-modal-btn <%- class_name %>">
+
+<button data-micromodal-trigger="modal-1" 
+<% if (id_name !== '') { %>
+  id="<%- id_name %>" 
+<% } %>
+class="c-modal-btn <%- class_name %>">
   <%- btn_text %>
 </button>

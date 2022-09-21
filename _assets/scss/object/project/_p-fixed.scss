@@ -5,7 +5,7 @@
 p-fixed
 ----------------------------------- */
 .p-fixed{
-  background: url(..//img/common/kv.jpg);
+  background-image: url(../img/common/kv.jpg);
   width: 100%;
   height: 100vh;
   background-repeat: no-repeat;
@@ -13,14 +13,14 @@ p-fixed
   background-position: center;
   // position: relative;
   position: fixed;
-  z-index: -1;
+  z-index: -2;
   animation-name:fadeInAnime2;
   animation-duration:2s;
   animation-fill-mode:forwards;
   opacity:0;
   @include sp{
     background: url(..//img/common/kv-sp.jpg);
-    background-size: contain;
+    // background-size: contain;
   }
 }
 
@@ -36,13 +36,28 @@ p-fixed
     }
   }
 
-.p-fixed__btn {
+  .p-fixed__blur{
+    position: absolute;
+    background-image: url(../img/common/kv_blur.jpg);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: block;
+    opacity: 0;
+    position: fixed;
+    z-index: -1;
+    @include sp{
+      background: url(..//img/common/kv_blur.jpg);
+    }
+  }
+  
+  .p-fixed__btn {
   position: absolute;
   content: "";
   width: 18rem;
   height: 18rem;
-  // bottom: 4rem;
-  // top: 90%;
   right: 4rem;
   line-height: 1.5;
   border-radius: 50%;
