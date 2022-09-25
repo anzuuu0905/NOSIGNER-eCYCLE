@@ -25,6 +25,7 @@ p-header
 }
 
 .p-header.m_fixed{
+  max-height: 8rem;
   position: fixed;
   left: 0;
   top: 0;
@@ -34,8 +35,23 @@ p-header
   img{
     width: 9.77rem;
   }
-  .p-header__menu{
-    padding-top: 1.5rem;
+  @include sp{
+    background:transparent;
+    box-shadow: none;
+  }
+
+  .p-header__inner{
+    padding: 0 1.5rem;
+    @include sp{
+      justify-content: end;
+      padding: 1.5rem;
+    }
+  }
+
+  .p-header__logo{
+    @include sp{
+      display: none;
+    }
   }
 }
 
@@ -65,6 +81,7 @@ p-header
 }
 
 .p-header__menu{
+  padding-top: 1.5rem;
   display: flex;
   width: auto;
   height: auto;
@@ -72,6 +89,7 @@ p-header
   letter-spacing: 0.02em;
   @include sp{
     display: block;
+    letter-spacing: 0.07em;
   }
 }
 
@@ -96,6 +114,10 @@ p-header
 
 .p-header__menu img{
   width: 8.1rem;
+  @include sp{
+    width: 10.7rem;
+    padding-right: 0.5rem;
+  }
 }
 
 .p-header__menu li{

@@ -21,7 +21,8 @@
   $request_btn.css({
     'position': 'fixed',
     'bottom': '20px',
-    'display':'block',
+    // 'display':'block',
+    'opacity':'',
   });
   // スクロールイベント
   $(window).on('scroll touchmove', function () {
@@ -30,27 +31,19 @@
     if (timer !== false) {
       clearTimeout(timer);
     }
-
     const scrollHeight = $(document).height(); //サイトの高さ
     const scrollTopPosition = $(window).scrollTop();//表示している画面の最上部の位置
     const scrollPosition = $(window).height() + $(window).scrollTop();//表示している画面の最下部の位置
-    // const footHeight = parseInt($('#footer').innerHeight()) -25;
     const partnerHeight = parseInt($('#partner').innerHeight()) -25;//パートナー企業の位置
-    const meritHeight = $('#p-merit').offset(); console.log('scrollH:',scrollHeight);
-    console.log('scrollP:',scrollPosition);
-    console.log('scrollTop:',scrollTopPosition);
-    console.log('MHEIGHT:',meritHeight);
+    const meritHeight = $('#ecycle').offset(); 
 
     if (scrollPosition > meritHeight.top ){
+      const meritHeight = $('#ecycle').offset(); 
       $p_fixed.css({
-        // 'background-image':'url(../img/common/kv_blur.jpg)',
-        // 'display':'block',
         'opacity':'1',
       });
     } else {
       $p_fixed.css({
-        // 'background-image':'url(../img/common/kv.jpg)',
-        // 'display':'none',
         'opacity':'0',
       });
     }
@@ -58,16 +51,17 @@
     if (scrollHeight - scrollPosition <= partnerHeight ) {
       // 現在の下から位置が、パートナーの高さの位置にはいったら
       $request_btn.css({
-        'display':'none',
+        // 'display':'none',
+        'opacity': '0'
       });
     } else {
       $request_btn.css({
         'position': 'fixed',
         'bottom': '20px',
-        'display':'block',
+        // 'display':'block',
+        'opacity': '1'
       });
     }
-
   });
 
 
@@ -92,32 +86,15 @@
   checkBreakPoint(mql);
 
 
-  // スムーズスクロール
-  // #で始まるアンカーをクリックした場合にスムーススクロール
-  $('a[href^="#"]').on('click', function () {
-    const speed = 500;
-    // アンカーの値取得
-    const href = $(this).attr('href');
-    // 移動先を取得
-    const target = $(href == '#' || href == '' ? 'html' : href);
-    // 移動先を数値で取得
-    const position = target.offset().top;
-
-    // スムーススクロール
-    $('body,html').animate({
-      scrollTop: position
-    }, speed, 'swing');
-    return false;
-  });
-
 
 
   // タブメニュー
   $(function () {
+    var headerHight = 100;
     // 最初のコンテンツは表示
     $(".js-content:first-of-type").css("display", "block");
     // タブをクリックすると
-    $(".js-tab").on("click", function () {
+  $(".js-tab").on("click", function () {
       // 現在選択されているタブからcurrentを外す
       $(".current").removeClass("current");
       // クリックされたタブにcurrentクラスを付与
@@ -126,17 +103,45 @@
       const index = $(this).index();
       // クリックしたタブのインデックス番号と同じコンテンツを表示
       $(".js-content").hide().eq(index).fadeIn(300);
-      $(".p-merit__tabarea.top .js-tab").eq(index).addClass("current");
-      $(".p-merit__tabarea.bottom .js-tab").eq(index).addClass("current");
-
       var speed = 400;
       var href= $(this).attr("data-url");
       var target = $(href == "#" || href == "" ? 'html' : href);
-      var position = target.offset().top;
+      var position = target.offset().top - headerHight;
+      $(".p-merit__tabarea.top .js-tab").eq(index).addClass("current");
+      $(".p-merit__tabarea.bottom .js-tab").eq(index).addClass("current");
+      
       $('body,html').animate({scrollTop:position}, speed, 'swing');
+      $(window).focus();
       return false;
     });
   });
+
+
+  // スムーズスクロール
+  // #で始まるアンカーをクリックした場合にスムーススクロール
+  $('a[href^="#"]').on('click', function () {
+    if ($(this).parent().hasClass('js-tab')) {
+      // js-tabクラスの場合は、別途処理する
+    }else{
+    const speed = 500;
+    if(deviceFlag === 0){
+      var headerHight = 100; 
+    }else{
+      var headerHight = 65; 
+    }
+    // アンカーの値取得
+    const href = $(this).attr('href');
+    // 移動先を取得
+    const target = $(href == '#' || href == '' ? 'html' : href);
+    // 移動先を数値で取得
+    const position = target.offset().top - headerHight;
+    // スムーススクロール
+    $('body,html').animate({
+      scrollTop: position
+    }, speed, 'swing');
+    return false;
+  }
+});
 
   // ヘッダー追従
   var mv_height = $('.p-mv').height();
@@ -155,18 +160,19 @@
       $('.js-drawer-menu').fadeOut();
       $('.js-overlay').fadeOut();
       $(this).removeClass('open');
-      // $("html").removeClass("is-fixed");  // 背景固定解除！
+      $("html").removeClass("is-fixed");  // 背景固定解除！
     } else {
       $('.js-drawer-menu').fadeIn();
       $('.js-overlay').fadeIn();
       $('.js-hamburger').addClass('open');
-      // $("html").addClass("is-fixed");     // 背景固定！
+      $("html").addClass("is-fixed");     // 背景固定！
     }
   });
 
   $('.js-drawer-menu a').on('click',function() {
     $('.js-hamburger').removeClass('open');
     $('.js-overlay').fadeOut();
+    $("html").removeClass("is-fixed");     // 背景固定！
   });
 
 })(jQuery);
@@ -174,79 +180,44 @@
 // モーダルアニメーション
 MicroModal.init({
   disableScroll: true,
-  awaitOpenAnimation: true,
-  awaitCloseAnimation: true
+  // awaitOpenAnimation: true,
+  // awaitCloseAnimation: true
+});
+
+
+//scroll_effect
+$(window).scroll(function () {
+  var scrollAnimationElm = document.querySelectorAll('.scroll_up , .scroll_left , .scroll_right, .js-imgfadein');
+  var scrollAnimationFunc = function () {
+    for (var i = 0; i < scrollAnimationElm.length; i++) {
+      var triggerMargin = 150;
+      if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
+        scrollAnimationElm[i].classList.add('on');
+      }
+    }
+  }
+  window.addEventListener('load', scrollAnimationFunc);
+  window.addEventListener('scroll', scrollAnimationFunc);
 });
 
 // GSAPを使用したアニメーション
-$(function(){
-  // 各項目のフェードイン
-  gsap.utils.toArray(".js-fadein").forEach(target => {
-    gsap.fromTo(target, { 
-      y: 50,
-      opacity:0//ここで初期状態を設定
-      },
-      {
-      y: 0,
-      opacity:1 ,//ここでアニメーションさせたい内容を書く
-        scrollTrigger: {
-          trigger: target,
-          start: 'top 80%'
-        }
-      }
-    );
-  });
-  // 丸抜き図形用のフェードイン
-  gsap.utils.toArray(".js-imgfadein").forEach(target => {
-    gsap.fromTo(target, { 
-      y: 100,
-      opacity:0//ここで初期状態を設定
-      },
-      {
-      y: 0,
-      opacity:1 ,//ここでアニメーションさせたい内容を書く
-      duration: 3, //５秒後かけてアニメーションさせる
-        scrollTrigger: {
-          trigger: target,
-          start: 'top 80%'
-        }
-      }
-    );
-  });
+// $(function(){
+//   // 丸抜き図形用のフェードイン
+//   gsap.utils.toArray(".js-imgfadein").forEach(target => {
+//     gsap.fromTo(target, { 
+//       y: 100,
+//       opacity:0//ここで初期状態を設定
+//       },
+//       {
+//       y: 0,
+//       opacity:1 ,//ここでアニメーションさせたい内容を書く
+//       duration: 3, //５秒後かけてアニメーションさせる
+//         scrollTrigger: {
+//           trigger: target,
+//           start: 'top 80%'
+//         }
+//       }
+//     );
+//   });
 
-  // // サイクルトリガー
-  // gsap.to('.js-cycle', {
-  //   opacity:1,
-  //   scrollTrigger: {
-  //     trigger: '.js-cycle-trigger',//アニメーションが始まるトリガーとなる要素。この要素が固定される
-  //     start: 'top top', //アニメーションが始まる位置
-  //     end: '+=750', //アニメーション開始位置から1000px固定する
-  //     pin: true, //トリガー要素を固定する
-  //     // pinnedContainer:".js-cycle-trigger",
-  //     pinReparent:true,
-  //     // pinSpacing: "margin",
-  //     // pin:".js-cycle-trigger #wraper"
-  //   },
-  //   stagger: {
-  //     from: "start",
-  //     amount: 1 //0.1秒ズラしてアニメーション
-  //     }
-  // });
-
-//   // マップトリガー
-  // gsap.to('.js-map', {
-  //   opacity:1,
-  //   scrollTrigger: {
-  //     trigger: '.js-map-trigger',//アニメーションが始まるトリガーとなる要素。この要素が固定される
-  //     start: 'top 10%', //アニメーションが始まる位置
-  //     end: '+=750', //アニメーション開始位置から1000px固定する
-  //     pin: true, //トリガー要素を固定する
-  //     pinnedContainer:".js-map-trigger",
-  //     // pin:".js-map-trigger #wraper"
-  //   },
-  //   stagger: {
-  //     from: "start",
-  //     amount: 1 //0.1秒ズラしてアニメーション
-  //   }
-  // });
-});
+// });

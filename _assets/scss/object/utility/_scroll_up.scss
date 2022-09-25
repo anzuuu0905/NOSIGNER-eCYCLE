@@ -16,10 +16,12 @@ scroll_up ｜下から上へ出現
 
 .scroll_up.on:nth-child(2){
   transition-delay: .3s;
+  // opacity: 0;
 }
 
 .scroll_up.on:nth-child(3){
   transition-delay: .6s;
+  // opacity: 0;
 }
 
 /*----------------------------
@@ -46,4 +48,17 @@ scroll_right ｜右から出現
 .scroll_right.on {
     opacity: 1.0;
     transform: translateX(0);
+}
+
+/*----------------------------
+scroll_up ｜下から上へ出現
+----------------------------*/
+.js-imgfadein {
+  transition: 2s ease-in-out;
+  transform: translateY(30px);
+  opacity: 0;
+}
+.js-imgfadein.on {
+  transform: translateY(0);
+  opacity: 1.0;
 }

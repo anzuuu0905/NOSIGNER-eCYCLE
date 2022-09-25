@@ -14,25 +14,25 @@
       "name": "e.CYCLEとは",
       "description": "",
       "type": "article",
-      "slug": "/#ecycle"
+      "slug": "#ecycle"
     },
     "merit": {
       "name": "ご参加メリット",
       "description": "",
       "type": "article",
-      "slug": "/#merit",
+      "slug": "#p-merit",
       "subpages":{
         "chiyoda":{
-          "name":"千代田区の<br class='u-hidden-sp'>事業者のみなさま",
-          "slug": "/#merit"
+          "name":"千代田区内の<br class='u-hidden-sp'>事業者のみなさま",
+          "slug": "#merit"
         },
         "plant":{
           "name":"再エネ発電所の<br class='u-hidden-sp'>みなさま",
-          "slug": "/#merit"
+          "slug": "#merit"
         },
         "electric":{
           "name":"小売電気事業者の<br class='u-hidden-sp'>みなさま",
-          "slug": "/#merit"
+          "slug": "#merit"
         }
       }
     },
@@ -40,7 +40,7 @@
       "name": "パートナー地域",
       "description": "",
       "type": "article",
-      "slug": "/#partner"
+      "slug": "#partner"
     }
   },
   "footer": {

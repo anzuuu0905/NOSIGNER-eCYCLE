@@ -15,9 +15,9 @@ p-mv
   position: relative;
   // position: fixed;
   @include sp{
-    background: url(..//img/common/kv-sp.jpg);
+    // background: url(..//img/common/kv-sp.jpg);
     // background-position: top;
-    background-size: contain;
+    // background-size: contain;
   }
 }
 
@@ -44,7 +44,7 @@ p-mv
   top: 53%;
   transform: translateY(-50%);
   animation-name:fadeInAnime3;
-  animation-duration:3s;
+  animation-duration:2s;
   animation-fill-mode:forwards;
   opacity:0;
   @include sp{
@@ -59,7 +59,8 @@ p-mv
   0% {
     opacity: 0;
   }
-  66%{
+  50%{
+  // 66%{
     opacity: 0;
   }
   100% {

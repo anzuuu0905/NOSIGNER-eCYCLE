@@ -15,12 +15,15 @@ p-fixed
   position: fixed;
   z-index: -2;
   animation-name:fadeInAnime2;
-  animation-duration:2s;
+  animation-duration:1.5s;
   animation-fill-mode:forwards;
   opacity:0;
   @include sp{
     background: url(..//img/common/kv-sp.jpg);
-    // background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+      // background-size: contain;
   }
 }
 
@@ -28,7 +31,7 @@ p-fixed
     0% {
       opacity: 0;
     }
-    50%{
+    33%{
       opacity: 0;
     }
     100% {
@@ -49,8 +52,11 @@ p-fixed
     position: fixed;
     z-index: -1;
     @include sp{
-      background: url(..//img/common/kv_blur.jpg);
-    }
+      background: url(..//img/common/kv_blur_sp.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      }
   }
   
   .p-fixed__btn {
@@ -60,6 +66,7 @@ p-fixed
   height: 18rem;
   right: 4rem;
   line-height: 1.5;
+  z-index: -1;
   border-radius: 50%;
   background: linear-gradient($bg-color2, $bg-color6);
 

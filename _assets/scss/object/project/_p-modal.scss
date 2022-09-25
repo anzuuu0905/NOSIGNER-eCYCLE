@@ -32,6 +32,14 @@
   background: linear-gradient(rgba(27,157,184,0.8), rgba(0,158,140, 0.8));
   // background: linear-gradient($bg-color2, $bg-color6);
 }
+
+.modal-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 .modal-title{
   font-size: 3.6rem;
   letter-spacing: 0.04em;
@@ -50,6 +58,10 @@
   // line-height: 1.5;
   margin-bottom: 2rem;
   margin-top: 6rem;
+  @include sp{
+    margin-bottom: 4rem;
+    margin-top: min(6rem, 4vh);
+    }
 }
 
 .modal-button{
@@ -76,7 +88,7 @@
     color: $font-color1;
     @include sp{
       font-size: 2rem;
-      padding: 3rem 4rem;
+      padding: min(3rem, 2vh) 4rem;
     }
   }
 }
@@ -118,7 +130,7 @@
   max-height: 100vh;
   top: 0;
   @include sp{
-    margin-top: 11.4rem;
+    // margin-top: 11.4rem;
   }
 }
 
@@ -155,7 +167,7 @@
   color: $font-color3;
   text-align: center;
   @include sp{
-    margin-top: 3.2rem;
+    margin-top: min(3.2rem, 4vh);
     font-size: 1.6rem;
   }
 }
@@ -165,7 +177,7 @@
   text-align: center;
   color: $font-color3;
   @include sp{
-    margin-top: 7.3rem;
+    margin-top: min(7.3rem, 3vh);
   }
 }
 
@@ -182,6 +194,10 @@
   position: relative;
   width: 65px;
   height: 65px;
+  @include sp{
+    width: 40px;
+    height: 40px;
+  }
   
 }
  

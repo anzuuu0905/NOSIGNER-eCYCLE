@@ -5,10 +5,12 @@
 p-footer
 ----------------------------------- */
 .p-footer{
+  // margin-top: 10000px;
   width: 100%;
   // background: $bg-color2;
   background: linear-gradient(to bottom right, $bg-color2, $font-color2);
   position: relative;
+  z-index: -1;
 }
 
 .p-footer__inner{

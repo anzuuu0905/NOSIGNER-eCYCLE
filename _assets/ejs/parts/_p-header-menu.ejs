@@ -22,8 +22,7 @@
                           <% if (typeof jsonData.pages[page].subpages !== 'undefined') { %>
                           <ul class="p-header__submenu">
                             <% for(let subpage in jsonData.pages[page].subpages){ %>
-                              <% console.log(jsonData.pages[page].subpages[subpage].name); %>
-                              <li class="js-tab">
+                              <li data-url="#merit" class="js-tab">
                                 <a href="<%= jsonData.pages[page].subpages[subpage].slug %>"><%- jsonData.pages[page].subpages[subpage].name %>
                                 </a>
                               </li>

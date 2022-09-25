@@ -48,6 +48,7 @@
 
 .c-hamburger.open {
   background: $bg-color8;
+  box-shadow: none;
 }
 
 .c-hamburger.open span {
@@ -58,26 +59,31 @@
 
 .p-header__overlay {
   @include sp{
-    background-color: $bg-color1;
+    // background-color: $bg-color1;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: -1;
     display: none;
-    border-radius: 0 0 2rem 2rem;
-    padding-bottom: 1rem;
+    // border-radius: 0 0 2rem 2rem;
+    // padding-bottom: 1rem;
+    background: url(../img/common/kv_blur_sp.jpg);
+    background-position: center;
+    background-size: cover;
+    
+    height: 100vh;
   }
 }
 
 .p-drawer-menu {
-	// width: 100vw;
-	// height: 100vh;
+  border-radius: 0 0 2rem 2rem;
+  background-color: $bg-color1;
 	z-index: 100;
-  margin-top: 13.6rem;
-	// display: none;
+  // margin-top: 13.6rem;
 	position: relative;
-	// background-color: $background;
+  padding-top: 12rem;
+  padding-bottom: 1rem;
 }
 
 .p-drawer-menu__items {
