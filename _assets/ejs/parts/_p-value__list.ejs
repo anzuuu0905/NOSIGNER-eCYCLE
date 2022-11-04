@@ -4,6 +4,12 @@
     for (var i = 0; i < jsonData.valuelist.tab[tab_no].value.length; i++) { 
       var contents_no = i + 1;
   %> 
-    <%- include('./_c-contents' , {contents_title: jsonData.valuelist.tab[tab_no].value[i].title, contents_text:jsonData.valuelist.tab[tab_no].value[i].text, contents_no: contents_no, class_name:'p-value__contents' }) %>
+
+  <% if (no === 1 && contents_no === 1) { %>
+    <%- include('./_c-contents2' , {contents_title: jsonData.valuelist.tab[tab_no].value[i].title, contents_text:jsonData.valuelist.tab[tab_no].value[i].text, contents_no: contents_no, class_name:'p-value__contents'}) %>
+    
+  <% } else { %>
+    <%- include('./_c-contents' , {contents_title: jsonData.valuelist.tab[tab_no].value[i].title, contents_text:jsonData.valuelist.tab[tab_no].value[i].text, contents_no: contents_no, class_name:'p-value__contents'}) %>
   <% } %>
+<% } %>
 </div>
