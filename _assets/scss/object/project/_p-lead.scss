@@ -5,62 +5,67 @@
 p-lead
 ----------------------------------- */
 .p-lead{
-  padding: 10rem 0 max(18.3rem, 12.7vw);
+  // padding: 10rem 0 max(18.3rem, 12.7vw);
   // padding: 10rem 0 max(18.3rem, 18.3rem);
-  background:url(..//img/common/intro.png);
+  // background:url(..//img/common/intro.png);
   // background-size: cover;
-  background-size: 100% max(100%, 79.4rem);
-  background-position: bottom;
-  background-repeat: no-repeat;
-  text-shadow: 0 0 2rem $font-color2;
+  // background-size: 100% max(100%, 79.4rem);
+  // background-position: bottom;
+  // background-repeat: no-repeat;
+  background: $bg-color1;
+  // text-shadow: 0 0 2rem $font-color2;
   
   @include sp{
-    padding: 6rem 0 max(18.3rem, 12.7vw);
-    background-size: contain;
-    background: $bg-color7;
-    position: relative;
-    background-size: 100% min(100%, 78.5rem);
+  //   padding: 6rem 0 max(18.3rem, 12.7vw);
+  //   background-size: contain;
+  //   background: $bg-color7;
+  //   position: relative;
+  //   background-size: 100% min(100%, 78.5rem);
   }
 }
 
-.p-lead::before{
-  @include sp{
-    content:"";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background:linear-gradient(rgba(0,158,140,0) 0%, rgba(0,158,140,1) 50%, rgba(0,158,140,1));
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-}
+// .p-lead::before{
+//   @include sp{
+//     content:"";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background:linear-gradient(rgba(0,158,140,0) 0%, rgba(0,158,140,1) 50%, rgba(0,158,140,1));
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     background-position: center;
+//   }
+// }
 
-.p-lead::after{
-  @include sp{
-    content:"";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
-    height: 20.8rem;
-    background:url(..//img/common/wh.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-  }
-}
+// .p-lead::after{
+//   @include sp{
+//     content:"";
+//     position: absolute;
+//     bottom: 0;
+//     left: 0;
+//     width: 100vw;
+//     height: 20.8rem;
+//     background:url(..//img/common/wh.png);
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     background-position: top;
+//   }
+// }
 
 .p-lead__inner{
-  color: $font-color3;
+  // padding-top: 0.5rem;
+  color: $font-color2;
   text-align: center;
   letter-spacing: 0.04em;
   position: relative;
   z-index: 2;
+  // height: 50rem;
   @include sp{
     text-align: left;
+    padding-top: 7rem;
+    // height: 24.5rem;
   }
 }
 
@@ -68,17 +73,42 @@ p-lead
   font-size: 4.8rem;
   font-weight: 700;
   line-height: 1.5;
+  letter-spacing: 0.04em;
   @include sp{
     font-size: 3.8rem;
     line-height: 1.684;
   }
 }
 
+.p-lead__title::before{
+  content: "";
+  position: absolute;
+  // z-index: 10000000;
+  left: 51.5%;
+  top: -16.5rem;
+  transform: translateX(-50%);
+  // display: block;
+  margin: 0 auto;
+  width: 12rem;
+  height: 8.5rem;
+  background: url(../img/svg/e-cycle.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  @include sp{
+    width: 9.84rem;
+    height: 7rem;
+    top: -13.5rem;
+    left: 52.5%;
+  }
+}
+
 .p-lead__text{
-  margin-top: 3.4rem;
+  margin-top: 3.1rem;
   font-size: 2rem;
   font-weight: 700;
   line-height: 2.2;
+  letter-spacing: 0.04em;
   @include sp{
     font-size: 1.8rem;
     line-height: 1.89;

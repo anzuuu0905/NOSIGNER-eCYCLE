@@ -17,7 +17,7 @@ html {
   @include max(1180) {
     font-size: calc((10/1180) * 100vw);
   }
-  @include max(768) {
+  @include max(767) {
     // font-size: calc((10/768) * 100vw);
     font-size: 62.5%; // 1rem = 10px
 }
@@ -176,17 +176,24 @@ dl,dt,dd {
 
 //独自font-family読み込み
 @font-face {
+  src: url(../font/ZenKakuGothicNew-Regular.ttf) format("truetype");
+  font-family: "Zen Kaku Gothic New";
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
   src: url(../font/ZenKakuGothicNew-Medium.ttf) format("truetype");
   font-family: "Zen Kaku Gothic New";
   font-weight: 500;
   font-display: swap;
- }
- 
- @font-face {
- src: url(../font/ZenKakuGothicNew-Bold.ttf) format("truetype");
- font-family: "Zen Kaku Gothic New";
- font-weight: 700;
- font-display: swap;
+}
+
+@font-face {
+  src: url(../font/ZenKakuGothicNew-Bold.ttf) format("truetype");
+  font-family: "Zen Kaku Gothic New";
+  font-weight: 700;
+  font-display: swap;
 }
 
 //SVGスプライトリセットCSS

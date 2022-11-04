@@ -5,7 +5,10 @@
 p-value
 ----------------------------------- */
 .p-value__list {
-  margin-top: 1.6rem;
+  margin-top: 1.1rem;
+  // margin: 1.6rem auto 0;
+  width: 100%;
+  max-width: 62rem;
   @include sp{
     padding-top: 1rem;
     margin-top: 0;
@@ -14,8 +17,8 @@ p-value
 
 .p-value__contents {
   position: relative;
-  margin: 11rem auto 0;
-  padding: 4rem 8rem;
+  margin: 10.5rem auto 0;
+  padding: 4rem 5.6rem;
   width: 62rem;
   max-width: 100%;
   // border: 2px solid $border-color1;
@@ -23,7 +26,7 @@ p-value
   box-sizing: border-box;
   background: $bg-color3;
   @include sp{
-    padding: 5.5rem 2rem 2rem;
+    padding: 4.5rem 2rem 2rem;
     margin: 9.5rem auto 0;
   }
 }
@@ -38,15 +41,23 @@ p-value
   max-width: 100%;
   height: 10rem;
   background-repeat: no-repeat;
+  @include sp{
+    top:-7.5rem;
+  }
 }
 
-.p-value__contents-1::after{
-  background: url(/img/svg/icon_1.svg);
+.p-value__list-1 .p-value__contents-1::after{
+  background: url(/img/svg/icon_5.svg);
   background-size: cover;
 }
 
 .p-value__list-1 .p-value__contents-2::after{
-  background: url(/img/svg/icon_5.svg);
+  background: url(/img/svg/icon_3.svg);
+  background-size: cover;
+}
+
+.p-value__list-2 .p-value__contents-1::after{
+  background: url(/img/svg/icon_1.svg);
   background-size: cover;
 }
 
@@ -55,13 +66,18 @@ p-value
   background-size: cover;
 }
 
-.p-value__list-3 .p-value__contents-2::after{
+.p-value__list-3 .p-value__contents-1::after{
   background: url(/img/svg/icon_2.svg);
   background-size: cover;
 }
 
+.p-value__list-3 .p-value__contents-2::after{
+  background: url(/img/svg/icon_6.svg);
+  background-size: cover;
+}
+
 .p-value__contents-3::after{
-  background: url(/img/svg/icon_3.svg);
+  background: url(/img/svg/icon_1.svg);
   background-size: cover;
 }
 
@@ -74,13 +90,14 @@ p-value
 }
 
 .p-value__annotation {
-  margin: 4.5rem auto 0;
+  margin: 4rem auto 0;
   width: 100%;
   line-height: 1.8;
+  letter-spacing: 0em;
   color:$font-color5;
   @include sp{
     font-size: 1rem;
-    letter-spacing: 0.04em;
+    // letter-spacing: 0em;
     margin: 3.5rem auto 0;
   }
 }

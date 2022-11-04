@@ -19,6 +19,7 @@ p-step
   font-weight: 700;
   color: $font-color2;
   text-align: center;
+  letter-spacing: 0.04em;
   @include sp{
     font-size: 1.8rem;
   }
@@ -39,31 +40,39 @@ p-step
 .p-step__title::before,
 .p-step__title::after{
   content:"";
-  height: 3rem;
+  height: 3.2rem;
   // width: 0.2rem;
   position: absolute;
   border-left: 2px solid $bg-color6;
-  top: 20%;
+  top: 6%;
   // transform: translateY(-50%);
   @include sp{
-    height: 4rem;
+    height: 4.5rem;
+    top: 8%;
   }
 }
 
 .p-step__title::before{
-  left: -2rem;
-  transform: rotate(-15deg)
+  left: -2.5rem;
+  transform: rotate(-20deg);
+  @include sp{
+    left: -1.8rem;
+  }
 }
 
 .p-step__title::after{
-  right: -2rem;
-  transform: rotate(15deg)
+  right: -1.5rem;
+  transform: rotate(18deg);
+  @include sp{
+    right: -2.2rem;
+    transform: rotate(14deg);
+  }
 }
 
   .p-step__contents {
   position: relative;
-  margin: 6.5rem auto 0;
-  padding: 4rem;
+  margin: 7rem auto 0;
+  padding: 4rem 3.8rem;
   width: 54rem;
   max-width: 100%;
   border: 2px solid $border-color1;
@@ -80,7 +89,7 @@ p-step
   height: 7rem;
   content: "";
   position: absolute;
-  top: -6.8rem;
+  top: -7.2rem;
   left: 50%;
   transform: translateX(-50%);
   box-sizing: border-box; 

@@ -17,7 +17,7 @@ c-ecycle-copy
 }
 
 .c-ecycle-copy img{
-  width: 20.8rem;
+  width: 22rem;
   margin-right: 1rem;
   @include sp{
     width: 22rem;
@@ -28,6 +28,7 @@ c-ecycle-copy
   line-height: 1.67;
   display: flex;
   align-items: center;
+  justify-content: center;
   @include sp{
     line-height: 1.5;
   }

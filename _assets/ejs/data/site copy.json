@@ -20,10 +20,14 @@
       "name": "ご参加メリット",
       "description": "",
       "type": "article",
-      "slug": "#merit-top",
+      "slug": "#p-merit",
       "subpages":{
         "chiyoda":{
           "name":"千代田区内の<br class='u-hidden-sp'>事業者のみなさま",
+          "slug": "#merit"
+        },
+        "plant":{
+          "name":"再エネ発電所の<br class='u-hidden-sp'>みなさま",
           "slug": "#merit"
         },
         "electric":{
@@ -55,10 +59,10 @@
       "title": "<a href='https://forms.zohopublic.jp/goodaround/form/Untitled3/formperma/l7kL21Ik8twAMOeHCLe2J-yzrXbhMiG6bzozCSqHN1o' target='_blank'>お申込みフォーム</a>よりご連絡",
       "text": "<a href='https://forms.zohopublic.jp/goodaround/form/Untitled3/formperma/l7kL21Ik8twAMOeHCLe2J-yzrXbhMiG6bzozCSqHN1o' target='_blank'>フォーム</a>から簡単にお申し込みができます。必要事項をご記入の上、直近12か月分の電気料金明細をアップロードしてお申込みください。いただいたデータをもとに入札をかけ、結果をご提示いたします。入札に費用は一切かかりません。入札によって、事業者のみなさまに持続可能で適正価格の電気をご使用いただけます。"
     }, {
-      "title": "小売電気事業者を選ぶ",
+      "title": "小売電気事業者を<br class='u-hidden-pc'>選ぶ",
       "text": "入札結果をもとに、小売電気事業者を選択します。入札結果を見て満足いただけなければ契約しなくても構いません。"
     }, {
-      "title": "契約・電気の切り替え",
+      "title": "契約・電気の<br class='u-hidden-pc'>切り替え",
       "text": "お選びいただいた小売電気事業者と契約し、電気の切り替え手続きを行います。事業者様の契約状況によって切り替えにかかる期間は異なります。"
     }, {
       "title": "再エネ電気の<br class='u-hidden-pc'>ご利用開始",

@@ -7,7 +7,8 @@ c-contents-title
 .c-contents-title {
   font-size: 2.4rem;
   font-weight: 700;
-  line-height: 1;
+  // line-height: 1;
+  line-height: 1.5;
   letter-spacing: 0.04em;
   color:$font-color2;
   text-align: center;
@@ -15,4 +16,9 @@ c-contents-title
     font-size: 2rem;
     // line-height: 1.5;
   }
+}
+
+.c-contents-title a{
+  color:$font-color2;
+  text-decoration: underline;
 }

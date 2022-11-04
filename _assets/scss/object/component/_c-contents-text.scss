@@ -9,10 +9,16 @@ c-contents-text
   line-height: calc(24/14);
   letter-spacing: 0.05em;
   color:$font-color1;
-  padding-top: 2.5rem;
+  // padding-top: 2.5rem;
+  padding-top: 2rem;
   @include sp{
     padding-top: 2rem;
   }
+}
+
+.c-contents-text a{
+  color:$font-color2;
+  text-decoration: underline;
 }
 
 .c-contents-text span{

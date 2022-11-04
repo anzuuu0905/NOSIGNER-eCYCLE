@@ -2,12 +2,11 @@
 @use '../../setting/setting' as *;
 
 /* --------------------------------
-l-partner
+l-model
 ----------------------------------- */
 
-.l-partner{
-  // margin: -8rem 0;
+.l-model{
+  margin-top: 3rem;
   @include sp{
-    // margin: -12rem 0;
   }
 }

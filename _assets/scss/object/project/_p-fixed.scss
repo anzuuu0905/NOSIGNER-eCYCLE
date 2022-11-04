@@ -13,7 +13,7 @@ p-fixed
   background-position: center;
   // position: relative;
   position: fixed;
-  z-index: -2;
+  z-index: -1;
   animation-name:fadeInAnime2;
   animation-duration:1.5s;
   animation-fill-mode:forwards;
@@ -47,10 +47,13 @@ p-fixed
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    animation-name:fadeInAnime2;
+    animation-duration:1.5s;
+    animation-fill-mode:forwards;
     display: block;
-    opacity: 0;
+    opacity: 1;
     position: fixed;
-    z-index: -1;
+    z-index: -2;
     @include sp{
       background: url(..//img/common/kv_blur_sp.jpg);
       background-repeat: no-repeat;

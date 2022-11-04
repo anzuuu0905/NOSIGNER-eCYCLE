@@ -14,7 +14,7 @@
 
   let timer = null;
   // 背景画像
-  const $p_fixed = $('.p-fixed');
+  const $p_fixed = $('.p-fixed__blur');
   // request_btn
   const $request_btn = $('#request_btn');
   // $request_btn.hide();
@@ -38,27 +38,18 @@
     const meritHeight = $('#merit-top').offset().top; 
     // console.log('meritHeight:');    
     // console.log(meritHeight);
-    console.log('scrollPosition:');
-    console.log(scrollPosition);
-    console.log('window');
-    console.log($(window).height());
-    console.log('meritHeight:');    
-    console.log(meritHeight);
-    const windowHeight = $(window).height();
-    const mvHeight = windowHeight + meritHeight - scrollPosition; 
-    console.log('mvHeight');
-    console.log(mvHeight);
+    // console.log('scrollPosition:');
+    // console.log(scrollPosition);
     if (scrollPosition > meritHeight){
       const meritHeight = $('#merit-top').offset().top; 
       $p_fixed.css({
         // 'top': '500',
-        // 'opacity':'1',
-        'height': mvHeight,
+        'opacity':'1',
+        
       });
     } else {
       $p_fixed.css({
-        // 'opacity':'0',
-        'height': windowHeight,
+        'opacity':'0',
       });
     }
     

@@ -6,40 +6,61 @@ p-model
 ----------------------------------- */
 
 .p-model{
-  padding-top: 12rem;
+  // padding-top: 1rem;
+  padding-bottom: 7.7rem;
   background: $bg-color1;
+  position: relative;
   @include sp{
     padding-top: 2.5rem;
   }
 }
 
 .p-model__inner{
-  position: relative;
+  // position: relative;
   margin: 0 auto;
   width: 1440px;
   max-width: 100%;
   @include sp{
     width: 100%;
-    padding: 7rem 2rem 20rem;
+    padding: 5rem 2rem 14rem;
     // margin-top: 14rem;
   }
 }
 
 .p-model__copybox{
-  text-align: center;  
+  margin: 0 auto;
+  width: 100%;
+  max-width: 32vw;
+  text-align: center;
+  @include sp{
+    max-width: 100%;
+  }
 }
 
 .p-model__copy{
   font-size: 2.4rem;
   font-weight: 700;
   letter-spacing: 0.04em;
+  color: $font-color2;
   @include sp{
     font-size: 1.8rem;
   }
 }
 
+.p-model__copy-under{
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: $font-color2;
+  @include sp{
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+}
+
 .p-model__copybox img{
-  margin-top: 1.3rem;
+  margin-top: 2.5rem;
   width: 45.8rem;
   max-width: 100%;
   @include sp{
@@ -49,23 +70,25 @@ p-model
 }
 
 .p-model__textbox{
-  width: 78rem;
-  max-width: 100%;
-  margin: 5.4rem auto 0;
+  width: 62rem;
+  max-width: 40vw;
+  margin: 4.5rem auto 0;
   @include sp{
-    margin-top: 3rem;
+    max-width: 100%;
+    margin-top: 4.5rem;
   }
 }
 
 .p-model__text{
-  margin-top: 3.2rem;
-  font-size: 1.8rem;
-  line-height: 1.778;
-  letter-spacing: 0.04em;
+  margin-top: 3.3rem;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  letter-spacing: 0.05em;
   font-weight: 500;
+  color: $font-color2;
   @include sp{
     font-size: 1.6rem;
-    line-height: 1.75;
+    letter-spacing: 0.02em;
     margin-top: 1.5rem;
 
 
@@ -100,6 +123,14 @@ p-model
   // height: 100%;
   transform: translate(-50%, 0);
   // opacity: 0;
+}
+
+.p-model__img{
+  position: relative;
+  margin-top: -1rem;
+  @include sp{
+    position: initial;
+  }
 }
 
 .p-model__img img{
