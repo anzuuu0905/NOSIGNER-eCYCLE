@@ -36,22 +36,12 @@
     const scrollPosition = $(window).height() + $(window).scrollTop();//表示している画面の最下部の位置
     const partnerHeight = parseInt($('#partner').innerHeight()) -25;//パートナー企業の位置
     const meritHeight = $('#merit-top').offset().top; 
-    // console.log('meritHeight:');    
-    // console.log(meritHeight);
-    console.log('scrollPosition:');
-    console.log(scrollPosition);
-    console.log('window');
-    console.log($(window).height());
-    console.log('meritHeight:');    
-    console.log(meritHeight);
-    const windowHeight = $(window).height();
-    const mvHeight = windowHeight + meritHeight - scrollPosition; 
-    console.log('mvHeight');
-    console.log(mvHeight);
+
+    const windowHeight = $(window).height(); //window高さ
+    const mvHeight = windowHeight + meritHeight - scrollPosition;  //MVの高さを縮めていく
     if (scrollPosition > meritHeight){
       const meritHeight = $('#merit-top').offset().top; 
       $p_fixed.css({
-        // 'top': '500',
         // 'opacity':'1',
         'height': mvHeight,
       });
@@ -66,14 +56,16 @@
       // 現在の下から位置が、パートナーの高さの位置にはいったら
       $request_btn.css({
         // 'display':'none',
-        'opacity': '0'
+        'opacity': '0',
+        'pointer-events':'none',
       });
     } else {
       $request_btn.css({
         'position': 'fixed',
         'bottom': '20px',
         // 'display':'block',
-        'opacity': '1'
+        'opacity': '1',
+        'pointer-events':'auto',
       });
     }
   });
@@ -141,7 +133,8 @@
     if(deviceFlag === 0){
       var headerHight = 100; 
     }else{
-      var headerHight = 65; 
+      // var headerHight = 65; 
+      var headerHight = -50;
     }
     // アンカーの値取得
     const href = $(this).attr('href');
@@ -149,6 +142,8 @@
     const target = $(href == '#' || href == '' ? 'html' : href);
     // 移動先を数値で取得
     const position = target.offset().top - headerHight;
+    console.log(headerHight);
+    console.log(position);
     // スムーススクロール
     $('body,html').animate({
       scrollTop: position
@@ -213,25 +208,3 @@ $(window).scroll(function () {
   window.addEventListener('load', scrollAnimationFunc);
   window.addEventListener('scroll', scrollAnimationFunc);
 });
-
-// GSAPを使用したアニメーション
-// $(function(){
-//   // 丸抜き図形用のフェードイン
-//   gsap.utils.toArray(".js-imgfadein").forEach(target => {
-//     gsap.fromTo(target, { 
-//       y: 100,
-//       opacity:0//ここで初期状態を設定
-//       },
-//       {
-//       y: 0,
-//       opacity:1 ,//ここでアニメーションさせたい内容を書く
-//       duration: 3, //５秒後かけてアニメーションさせる
-//         scrollTrigger: {
-//           trigger: target,
-//           start: 'top 80%'
-//         }
-//       }
-//     );
-//   });
-
-// });
