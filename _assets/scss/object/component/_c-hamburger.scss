@@ -8,8 +8,19 @@
   border-radius: 50%;
   box-shadow: 0 0 1rem rgba(0, 158, 140, 0.3);
   z-index:9999;
-}
- 
+  animation-name:fadeIn;
+  animation-duration:1.5s;
+  animation-fill-mode:forwards;
+  }
+
+// @keyframes fadeIn{
+//   0% {
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
 .c-hamburger span {
   position: relative;
   display: block;
@@ -28,34 +39,60 @@
   margin-bottom: 0.5rem;
 }
 
-/*OPEN時の動き*/
-.c-hamburger.open span:nth-child(1) {
-  top: 2.3rem;
-  left: 1.3rem;
-  transform: rotate(315deg);
-}
+// /*OPEN時の動き*/
+// .c-hamburger.open span:nth-child(1) {
+//   top: 2.3rem;
+//   left: 1.3rem;
+//   transform: rotate(315deg);
+// }
 
-.c-hamburger.open span:nth-child(2) {
-  // transform: translateY(-50%);
-  opacity: 0;
-}
+// .c-hamburger.open span:nth-child(2) {
+//   // transform: translateY(-50%);
+//   opacity: 0;
+// }
 
-.c-hamburger.open span:nth-child(3) {
-  top: 1rem;
-  left: 1.3rem;
-  transform: rotate(-315deg);
-}
+// .c-hamburger.open span:nth-child(3) {
+//   top: 1rem;
+//   left: 1.3rem;
+//   transform: rotate(-315deg);
+// }
+
+// .c-hamburger.open {
+//   background: $bg-color8;
+//   box-shadow: none;
+//   animation-name:fadeIn;
+//   animation-duration:1.5s;
+//   animation-fill-mode:forwards;
+// }
+
+// .c-hamburger.open span {
+//   background: $border-color3;
+//   width: 2.5rem;
+// }
+
+// .c-hamburger {
+//   background: url(../img/common/hamburger_close.png);
+//   background-repeat: no-repeat;
+//   background-size: contain;
+//   background-position: center;
+//   width: 14.4rem;
+//   height: 14.2rem;
+// }
 
 .c-hamburger.open {
-  background: $bg-color8;
-  box-shadow: none;
+  background: url(../img/common/hamburger_open.png);
+  width: 5rem;
+  height: 5rem;
+  background-size: contain;
+  // animation-name:fadeIn;
+  // animation-duration:1.5s;
+  // animation-fill-mode:forwards;
+
 }
 
-.c-hamburger.open span {
-  background: $border-color3;
-  width: 2.5rem;
+.c-hamburger.open span{
+  opacity: 0;
 }
-
 
 .p-header__overlay {
   @include sp{

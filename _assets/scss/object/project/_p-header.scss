@@ -33,7 +33,7 @@ p-header
   transition: all 0.3s;
   box-shadow: 0 0.4rem 2rem rgba(0, 158, 140, 0.2);
   img{
-    width: 9.77rem;
+    width: 8.1rem;
   }
   @include sp{
     background:transparent;
@@ -123,6 +123,7 @@ p-header
 .p-header__menu li{
   display: flex;
   position: relative;
+  letter-spacing: 0;
   @include sp{
     display: block;
   }
@@ -149,7 +150,7 @@ p-header
   position: absolute;
   top: 5.5rem;
   left: 1.5rem;
-  width: 14.8rem;
+  width: 16rem;
   background: $bg-color1;
   border-radius: 1rem;
   box-shadow: 0 0.4rem 2rem rgba(0, 158, 140, 0.2);
@@ -205,7 +206,7 @@ p-header
 
 .p-header__submenu a {
   width: 100%;
-  padding: 1.2rem 1.4rem;
+  padding: 1.2rem 1.0rem;
   font-weight: 500;
   color: $font-color1;
   line-height: 1.4285;

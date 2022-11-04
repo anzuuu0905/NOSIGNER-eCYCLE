@@ -8,7 +8,7 @@
 
   /* ここから */
 
-  const breakpoint = 640;
+  const breakpoint = 767;
   const mql = window.matchMedia(`screen and (max-width: ${breakpoint}px)`); //、MediaQueryListの生成
   let deviceFlag = mql.matches ? 1 : 0; // 0 : PC ,  1 : SP
 
@@ -24,6 +24,22 @@
     // 'display':'block',
     'opacity':'',
   });
+
+  // ヘッダー追従
+  if (deviceFlag === 0) {
+    var mv_height = $('.p-mv').height();
+    $(window).scroll(function () {
+      var top = $(window).scrollTop();
+      if (mv_height < top) {   
+        $('.p-header').addClass('m_fixed');
+      } else {
+        $('.p-header').removeClass('m_fixed');
+      }
+    });
+  }else{
+    $('.p-header').addClass('m_fixed');
+  }
+
   // スクロールイベント
   $(window).on('scroll touchmove', function () {
 
@@ -142,8 +158,6 @@
     const target = $(href == '#' || href == '' ? 'html' : href);
     // 移動先を数値で取得
     const position = target.offset().top - headerHight;
-    console.log(headerHight);
-    console.log(position);
     // スムーススクロール
     $('body,html').animate({
       scrollTop: position
@@ -151,17 +165,6 @@
     return false;
   }
 });
-
-  // ヘッダー追従
-  var mv_height = $('.p-mv').height();
-  $(window).scroll(function () {
-    var top = $(window).scrollTop();
-    if (mv_height < top) {   
-      $('.p-header').addClass('m_fixed');
-    } else {
-      $('.p-header').removeClass('m_fixed');
-    }
-  });
 
 // ハンバーガーメニュー
   $('.js-hamburger').on('click', function () {
