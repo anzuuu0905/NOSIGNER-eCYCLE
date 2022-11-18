@@ -1,4 +1,4 @@
-@use '../..//mixin/mixin' as *;
+@use '../../mixin/mixin' as *;
 @use '../../setting/setting' as *;
 
 /* --------------------------------
@@ -19,7 +19,7 @@ p-fixed
   animation-fill-mode:forwards;
   opacity:0;
   @include sp{
-    background: url(..//img/common/kv-sp.jpg);
+    background: url(../img/common/kv-sp.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -55,7 +55,7 @@ p-fixed
     position: fixed;
     z-index: -2;
     @include sp{
-      background: url(..//img/common/kv_blur_sp.jpg);
+      background: url(../img/common/kv_blur_sp.jpg);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;

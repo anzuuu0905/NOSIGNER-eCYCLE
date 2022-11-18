@@ -1,4 +1,4 @@
-@use '../..//mixin/mixin' as *;
+@use '../../mixin/mixin' as *;
 @use '../../setting/setting' as *;
 
 /* --------------------------------
@@ -221,4 +221,9 @@ p-model
     bottom: -1.7rem;
     right: -4.2rem;
   }
+}
+
+.p-model__scheme{
+  margin-top: 5rem;
+  width: 100%;
 }

@@ -1,4 +1,4 @@
-@use '../..//mixin/mixin' as *;
+@use '../../mixin/mixin' as *;
 @use '../../setting/setting' as *;
 
 /* --------------------------------
@@ -130,7 +130,7 @@ p-header
 }
 
 .p-header__menu li a span{
-  background: url(..//img/svg/angle-down-solid.svg);
+  background: url(../img/svg/angle-down-solid.svg);
   width: 1.055rem;
   height: 0.615rem;
   margin-left: 1rem;
@@ -148,12 +148,14 @@ p-header
 .p-header__submenu {
   display: none;
   position: absolute;
-  top: 5.5rem;
+  top: 5rem;
+  padding-top: 1.5rem;
+  // margin-top: 6.5rem;
   left: 1.5rem;
   width: 16rem;
-  background: $bg-color1;
-  border-radius: 1rem;
-  box-shadow: 0 0.4rem 2rem rgba(0, 158, 140, 0.2);
+  // background: $bg-color1;
+  // border-radius: 1rem;
+  // box-shadow: 0 0.4rem 2rem rgba(0, 158, 140, 0.2);
 
   @include sp{
     position: relative;
@@ -167,6 +169,19 @@ p-header
 .p-header__submenu a {
   background: $bg-color1;
 }
+.p-header__submenu li{
+  background: $bg-color1;
+  box-shadow: 0 0.4rem 2rem rgba(0, 158, 140, 0.2);
+
+
+}
+.p-header__submenu li:first-of-type {
+  border-radius: 1rem 1rem 0 0 ;
+}
+.p-header__submenu li:last-of-type {
+  border-radius: 0 0 1rem 1rem;
+}
+
 .p-header__submenu li:first-of-type a{
   border-radius: 1rem 1rem 0 0 ;
 }

@@ -1,11 +1,11 @@
-@use '../..//mixin/mixin' as *;
+@use '../../mixin/mixin' as *;
 @use '../../setting/setting' as *;
 
 /* --------------------------------
 p-request
 ----------------------------------- */
 .p-request{
-  background: url(..//img/common/kv_g.jpg);
+  background: url(../img/common/kv_g.jpg);
   height: 41.667vw;
   background-repeat: no-repeat;
   background-position: top;
@@ -27,24 +27,24 @@ p-request
   }
 }
 
-.p-request__img{
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background:url(..//img/common/japan_1.png);
-  width: calc(110rem - 2.2rem) ;
-  max-width: 76.389vw;
-  height: 82rem;
-  // height: calc(82rem - 6.8rem + 1.2rem);
-  z-index: 10;
-  background-size: cover;
-  background-position:bottom -6.8rem right -2.2rem;
-  background-repeat: no-repeat;
-  @include sp{
-    display: none;
-  }
-}
+// .p-request__img{
+//   content: "";
+//   position: absolute;
+//   bottom: 0;
+//   right: 0;
+//   background:url(../img/common/japan_1.png);
+//   width: calc(110rem - 2.2rem) ;
+//   max-width: 76.389vw;
+//   height: 82rem;
+//   // height: calc(82rem - 6.8rem + 1.2rem);
+//   z-index: 10;
+//   background-size: cover;
+//   background-position:bottom -6.8rem right -2.2rem;
+//   background-repeat: no-repeat;
+//   @include sp{
+//     display: none;
+//   }
+// }
 
 .p-request__wrapper{
   padding-top: 15.5rem;

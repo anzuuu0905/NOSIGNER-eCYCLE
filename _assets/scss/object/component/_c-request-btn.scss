@@ -1,4 +1,4 @@
-@use '../..//mixin/mixin' as *;
+@use '../../mixin/mixin' as *;
 @use '../../setting/setting' as *;
 
 
@@ -32,5 +32,6 @@ c-request-btn
   color: $font-color2;
   @include sp{
    font-size: 1.4rem; 
+   text-align: left;
   }
 }

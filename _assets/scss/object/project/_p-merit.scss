@@ -1,4 +1,4 @@
-@use '../..//mixin/mixin' as *;
+@use '../../mixin/mixin' as *;
 @use '../../setting/setting' as *;
 
 /* --------------------------------
@@ -84,7 +84,7 @@ p-merit
 }
 .p-merit__inner::before{
     content: "";
-    background: url(..//img/common/white-top.png);
+    background: url(../img/common/white-top.png);
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -104,7 +104,7 @@ p-merit
 
 .p-merit__inner::after{
     content: "";
-    background: url(..//img/common/white-bottom.png);
+    background: url(../img/common/white-bottom.png);
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -133,7 +133,7 @@ p-merit
 
 .p-merit__tabarea.bottom::after{
   content: "";
-  background: url(..//img/common/white-bottom.png);
+  background: url(../img/common/white-bottom.png);
   position: absolute;
   top: 9.6rem;
   left: 50%;

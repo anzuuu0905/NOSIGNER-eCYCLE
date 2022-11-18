@@ -1,11 +1,11 @@
-@use '../..//mixin/mixin' as *;
+@use '../../mixin/mixin' as *;
 @use '../../setting/setting' as *;
 
 /* --------------------------------
 p-mv
 ----------------------------------- */
 .p-mv{
-  // background: url(..//img/common/kv.jpg);
+  // background: url(../img/common/kv.jpg);
   background: initial;
   width: 100%;
   height: 100vh;
@@ -15,7 +15,7 @@ p-mv
   position: relative;
   // position: fixed;
   @include sp{
-    // background: url(..//img/common/kv-sp.jpg);
+    // background: url(../img/common/kv-sp.jpg);
     // background-position: top;
     // background-size: contain;
   }
