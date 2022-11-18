@@ -150,6 +150,7 @@ p-header
   position: absolute;
   top: 5rem;
   padding-top: 1.5rem;
+  // margin-top: 1.5rem;
   // margin-top: 6.5rem;
   left: 1.5rem;
   width: 16rem;
@@ -170,10 +171,10 @@ p-header
   background: $bg-color1;
 }
 .p-header__submenu li{
-  background: $bg-color1;
-  box-shadow: 0 0.4rem 2rem rgba(0, 158, 140, 0.2);
-
-
+  @include pc{
+    background: $bg-color1;
+    box-shadow: 0 0.4rem 2rem rgba(0, 158, 140, 0.2);
+  }
 }
 .p-header__submenu li:first-of-type {
   border-radius: 1rem 1rem 0 0 ;
@@ -237,3 +238,7 @@ p-header
   border-bottom: none;
 }
 
+.p-header__menubox.m_fixed {
+  position: fixed;
+  right: 2rem;
+}

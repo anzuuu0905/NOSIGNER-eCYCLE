@@ -37,7 +37,7 @@
       }
     });
   }else{
-    $('.p-header').addClass('m_fixed');
+    $('.p-header__menubox').addClass('m_fixed');
   }
 
   // スクロールイベント
